@@ -1,0 +1,18 @@
+[
+  {
+    "type": "H4",
+    "children": [
+      {
+        "text": "TO DO add blue shadow'ed RTE and swap this RTE for that."
+      }
+    ]
+  },
+  {
+    "type": "H4",
+    "children": [
+      {
+        "text": "For many applications, a CMS is costly overhead. Dynamic content can instead use 3rd party services."
+      }
+    ]
+  }
+]

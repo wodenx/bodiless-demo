@@ -63,12 +63,6 @@ const plugins = [
       }
     },
   },
-  // {
-  //   resolve: '@bodiless/gatsby-plugin-ssi',
-  //   options: {
-  //     ssiEntities: getSSIEntities('ssi/ssi_conf.json'),
-  //   }
-  // },
   {
     resolve: 'gatsby-plugin-canonical-urls',
     options: {
@@ -79,10 +73,6 @@ const plugins = [
     resolve: 'gatsby-plugin-sitemap',
     options: { excludes: disabledPages },
   },
-  // ...createDefaultContentPlugins(
-  //   ...getSampleDefaultContentConfig(),
-  //   ...getSiteDefaultContentConfig(),
-  // ),
   {
     resolve: 'bodiless-demo',
   }

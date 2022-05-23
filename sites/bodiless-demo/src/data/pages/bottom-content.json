@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "uuid": "301ff520-dad6-11ec-b70a-a1c4c7d90965",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "CardTitleDescriptionHorizontal"
+    },
+    {
+      "uuid": "6d5de7d0-dad6-11ec-b70a-a1c4c7d90965",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "CardTitleDescriptionHorizontal"
+    },
+    {
+      "uuid": "ca564270-dad6-11ec-b70a-a1c4c7d90965",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "RichText"
+    },
+    {
+      "uuid": "dedffb00-dad6-11ec-b70a-a1c4c7d90965",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "CardTitleDescriptionHorizontal"
+    },
+    {
+      "uuid": "21690fc0-dad7-11ec-b70a-a1c4c7d90965",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "CardTitleDescriptionHorizontal"
+    },
+    {
+      "uuid": "48eb0b70-dad7-11ec-b70a-a1c4c7d90965",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "CardTitleDescriptionHorizontal"
+    }
+  ]
+}
