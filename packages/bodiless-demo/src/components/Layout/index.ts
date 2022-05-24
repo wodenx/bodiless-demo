@@ -17,7 +17,7 @@ const DemoHeader = asHeaderToken({
     DesktopSearch: replaceWith(() => null),
     UtilityMenuWrapper: replaceWith(() => null),
     UtilityMenu: replaceWith(() => null),
-    LanguageButton: replaceWith(() => null),
+    LanguageButton: replaceWith(() => null), // replace with Edit Current Page Button
     SearchToggler: replaceWith(() => null),
     BurgerMenu: vitalBurgerMenu.Default,
   },
