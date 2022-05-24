@@ -12,25 +12,29 @@
  * limitations under the License.
  */
 
-// TBD remove after shadowing PR merges and have vitalPageBase
-import {
-  on,
-} from '@bodiless/fclasses';
-import { asFluidToken } from '@bodiless/vital-elements';
-import {
-  vitalPage,
-  GenericTemplateClean,
-  vitalGenericTemplate,
-} from '@bodiless/vital-templates';
+import React from 'react';
+import GitHubButton from 'react-github-btn';
 
-const Default = asFluidToken({
-  ...vitalPage.Default,
-  Components: {
-    _default: on(GenericTemplateClean)(vitalGenericTemplate.Default),
-  },
-});
+export const GitStar = () => (
+  <GitHubButton
+    href="https://github.com/johnsonandjohnson/Bodiless-JS"
+    data-size="large"
+    data-show-count="true"
+    aria-label="Star johnsonandjohnson/Bodiless-JS on GitHub"
+  >
+    Star
 
-export default {
-  ...vitalPage,
-  Default,
-};
+  </GitHubButton>
+);
+
+export const GitDiscuss = () => (
+
+  <GitHubButton
+    href="https://github.com/johnsonandjohnson/Bodiless-JS/discussions"
+    data-size="large"
+    aria-label="Discuss johnsonandjohnson/Bodiless-JS on GitHub"
+  >
+    Discuss
+
+  </GitHubButton>
+);
