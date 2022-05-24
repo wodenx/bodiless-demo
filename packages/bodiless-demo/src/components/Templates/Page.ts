@@ -22,8 +22,7 @@ import {
 } from '@bodiless/vital-templates';
 import DemoTemplate from './GenericTemplate';
 
-const Default = asFluidToken({
-  ...vitalPage.Default,
+const Default = asFluidToken(vitalPage.Default, {
   Components: {
     _default: on(GenericTemplateClean)(DemoTemplate.Default),
   },

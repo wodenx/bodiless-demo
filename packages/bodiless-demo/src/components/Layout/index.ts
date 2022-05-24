@@ -18,10 +18,9 @@ import { replaceWith } from '@bodiless/fclasses';
 import {
   asLayoutToken,
   asHeaderToken, vitalHeader,
-  asFooterToken, vitalFooter,
 } from '@bodiless/vital-layout';
 import { vitalBurgerMenu } from '@bodiless/vital-navigation';
-import { GitStar, GitDiscuss } from '../GitHubButtons';
+import { GitStar } from '../GitHubButtons';
 
 // TBD -- move to shadowing and switch vitalHeader to vitalHeaderBase
 const DemoHeader = asHeaderToken({
@@ -37,20 +36,9 @@ const DemoHeader = asHeaderToken({
   },
 });
 
-// TBD -- move to shadowing and switch vitalFooter to vitalFooterBase
-const DemoFooter = asFooterToken({
-  ...vitalFooter.Default,
-  Components: {
-    Rewards: replaceWith(GitDiscuss),
-    SocialLinksWrapper: replaceWith(() => null),
-    SocialLinks: replaceWith(() => null),
-  },
-});
-
 // TBD -- move to shadowing and switch vitalLayout to vitalLayoutBase
 export const DemoLayout = asLayoutToken({
   Components: {
     Header: DemoHeader,
-    Footer: DemoFooter,
   },
 });
