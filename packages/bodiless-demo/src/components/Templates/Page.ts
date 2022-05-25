@@ -12,19 +12,27 @@
  * limitations under the License.
  */
 
-// TBD remove after shadowing PR merges....
+// TBD Tempaltes needs Page fix.
 
-import { on } from '@bodiless/fclasses';
+import { on, replaceWith } from '@bodiless/fclasses';
 import { asFluidToken } from '@bodiless/vital-elements';
 import {
   vitalPage,
   GenericTemplateClean,
+  asGenericTemplateToken,
+  vitalGenericTemplate,
 } from '@bodiless/vital-templates';
-import DemoTemplate from './GenericTemplate';
+
+const SkipBreadcrumbTop = asGenericTemplateToken(vitalGenericTemplate.Default, {
+  Components: {
+    BreadcrumbWrapper: replaceWith(() => null),
+    TopWrapper: replaceWith(() => null),
+  },
+});
 
 const Default = asFluidToken(vitalPage.Default, {
   Components: {
-    _default: on(GenericTemplateClean)(DemoTemplate.Default),
+    _default: on(GenericTemplateClean)(SkipBreadcrumbTop),
   },
 });
 
