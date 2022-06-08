@@ -7,6 +7,21 @@ const twConfig = {
   content: [
     './lib/**/!(*.d).{ts,js,jsx,tsx}',
   ],
+  theme: {
+    extend: {
+      colors: {
+        demo: {
+          boxshadow: '#cbd5e1',
+        },
+      },
+      maxWidth: {
+        64: '16rem',
+      },
+      minWidth: {
+        64: '16rem',
+      },
+    },
+  },
 };
 
 module.exports = getPackageTailwindConfig({
