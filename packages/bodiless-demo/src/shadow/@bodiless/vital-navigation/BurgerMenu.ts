@@ -12,25 +12,18 @@
  * limitations under the License.
  */
 
-// TBD remove after shadowing PR merges and have vitalPageBase
-import {
-  on,
-} from '@bodiless/fclasses';
-import { asFluidToken } from '@bodiless/vital-elements';
-import {
-  vitalPage,
-  GenericTemplateClean,
-  vitalGenericTemplate,
-} from '@bodiless/vital-templates';
+import { replaceWith } from '@bodiless/fclasses';
+import { vitalBurgerMenuBase, asBurgerMenuToken } from '@bodiless/vital-navigation';
+import { GitStar } from '../../../components/GitHubButtons';
 
-const Default = asFluidToken({
-  ...vitalPage.Default,
+const Default = asBurgerMenuToken(vitalBurgerMenuBase.Default, {
   Components: {
-    _default: on(GenericTemplateClean)(vitalGenericTemplate.Default),
+    UtilityMenu: replaceWith(() => null),
+    WhereToBuy: replaceWith(GitStar),
   },
 });
 
 export default {
-  ...vitalPage,
+  ...vitalBurgerMenuBase,
   Default,
 };
