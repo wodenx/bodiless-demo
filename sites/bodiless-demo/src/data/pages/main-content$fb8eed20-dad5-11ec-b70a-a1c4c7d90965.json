@@ -1,18 +1,3 @@
-[
-  {
-    "type": "H4",
-    "children": [
-      {
-        "text": "TO DO add blue shadow'ed RTE and swap this RTE for that."
-      }
-    ]
-  },
-  {
-    "type": "H4",
-    "children": [
-      {
-        "text": "Replace complex editorial workflows, especially when changes to \"content\" and \"presentation\" are linked to a single process."
-      }
-    ]
-  }
-]
+{
+  "text": "Replace complex editorial workflows,<br>especially when changes to \"content\" and \"presentation\" are linked to a single process."
+}
