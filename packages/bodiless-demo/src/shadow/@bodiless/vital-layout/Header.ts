@@ -7,7 +7,6 @@ import { GitStar } from '../../../components/GitHubButtons';
 const Default = asHeaderToken(vitalHeaderBase.Default, {
   Components: {
     WhereToBuy: replaceWith(GitStar),
-    LanguageButton: replaceWith(() => null),
     UtilityMenuWrapper: replaceWith(() => null),
     UtilityMenu: replaceWith(() => null),
     DesktopSearch: replaceWith(as(vitalButtons.Primary)(ButtonClean)),
