@@ -4,7 +4,7 @@ import { asFluidToken } from '@bodiless/vital-elements';
 import { vitalFlowContainerBase } from '@bodiless/vital-flowcontainer';
 import { CardClean } from '@bodiless/vital-card';
 import { StyledEditor, StyledEditorClean } from '../../../components/StyledEditor';
-import { asGetStarted } from '../../../components/Cards';
+import { asGetStarted } from '../../../components/Card';
 
 const isHome = () => useNode().node.pagePath === '/';
 
