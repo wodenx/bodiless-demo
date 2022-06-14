@@ -7,6 +7,7 @@ const asGetStarted = asCardToken(
   vitalCard.WithNoEyebrow,
   {
     Components: {
+      DescriptionWrapper: replaceWith(() => null),
       ImageWrapper: replaceWith(() => null),
       Image: replaceWith(() => null),
     },

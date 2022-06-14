@@ -1,6 +1,6 @@
 import omit from 'lodash/omit';
 import {
-  asElementToken, vitalColor, vitalTextDecoration, vitalTypographyBase
+  asElementToken, vitalTextDecoration, vitalTypographyBase
 } from '@bodiless/vital-elements';
 import { as } from '@bodiless/fclasses';
 
@@ -14,7 +14,7 @@ export default {
     Theme: {
       _: as(
         vitalTextDecoration.Bold,
-        vitalColor.TextPrimaryInteractive,
+        'text-demo-primary-interactive',
       ),
     },
   }),
@@ -22,7 +22,7 @@ export default {
     Theme: {
       _: as(
         vitalTextDecoration.Bold,
-        vitalColor.TextPrimaryInteractive,
+        'text-demo-primary-interactive',
       ),
     },
   }),
@@ -30,7 +30,7 @@ export default {
     Theme: {
       _: as(
         vitalTextDecoration.Medium,
-        vitalColor.TextPrimaryInteractive,
+        'text-demo-primary-interactive',
       ),
     },
   }),
