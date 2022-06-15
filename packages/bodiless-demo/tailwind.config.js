@@ -14,6 +14,7 @@ const twConfig = {
           boxshadow: '#cbd5e1',
           'primary-interactive': '#473B85', // Kevin's pick: '#005392',
           'primary-interactive-active': '##5A4BA8',
+          'table-light': '#CFD7DE',
         },
       },
       maxWidth: {
