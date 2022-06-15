@@ -1,5 +1,5 @@
 import {
-  addProps, as, on, withDesign, addClassesIf, and, replaceWith, flowHoc,
+  addProps, as, on, withDesign, addClassesIf, and, startWith, flowHoc,
 } from '@bodiless/fclasses';
 import { withNode, withNodeKey } from '@bodiless/core';
 import { asBodilessChameleon } from '@bodiless/components';
@@ -13,10 +13,10 @@ import {
 } from '@bodiless/table';
 import { vitalTable, asTableToken } from '@bodiless/vital-table';
 import {
-  EditorPlainClean, RichTextClean, vitalEditorPlain, vitalRichText
+  EditorPlainClean, vitalEditorPlain, RichTextClean, vitalRichText
 } from '@bodiless/vital-editors';
-import GreenYes from '../../assets/GreenYes';
-import RedNo from '../../assets/RedNo';
+import GreenYesIcon from '../../assets/GreenYes';
+import RedNoIcon from '../../assets/RedNo';
 
 const DemoStyleTable = asTableToken({
   Meta: flowHoc.meta.term('Type')('Table'),
@@ -37,9 +37,9 @@ const DemoStyleTable = asTableToken({
     CellContent: as(
       asBodilessChameleon('component', { component: 'Editor' }, () => ({ groupLabel: 'Cell Content', label: 'Type' })),
       withDesign({
-        Yes: replaceWith(GreenYes),
-        No: replaceWith(RedNo),
         PlainEditor: on(EditorPlainClean)(vitalEditorPlain.Default, addProps({ placeholder: 'Cell' })),
+        Yes: startWith(GreenYesIcon),
+        No: startWith(RedNoIcon),
         Editor: on(RichTextClean)(vitalRichText.Default, addProps({ placeholder: 'Cell' })),
       }),
     ),
@@ -68,7 +68,7 @@ const WithHighlightThirdColumn = asTableToken({
 
 const asSecondColumnHighlighted = as(
   DemoStyleTable,
-  vitalTable.WithFlowContainerPreview,
+  // vitalTable.WithFlowContainerPreview,
   vitalTable.WithBorders,
   WithHighlightSecondColumn,
 );
