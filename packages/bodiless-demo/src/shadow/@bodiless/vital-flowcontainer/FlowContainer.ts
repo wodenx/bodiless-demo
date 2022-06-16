@@ -8,7 +8,7 @@ import { TitleTableClean, asSecondColumnHighlightedTitle, asThirdColumnHighlight
 
 const ExtraPadding = asFluidToken(vitalFlowContainerBase.Default, {
   Spacing: {
-    ComponentWrapper: 'my-12',
+    ComponentWrapper: 'my-8',
   },
 });
 
