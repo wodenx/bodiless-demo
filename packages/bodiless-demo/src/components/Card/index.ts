@@ -1,12 +1,13 @@
-import { flowHoc, replaceWith } from '@bodiless/fclasses';
-import { asCardToken, vitalCard } from '@bodiless/vital-card';
+import { Div, flowHoc, replaceWith } from '@bodiless/fclasses';
+import { asCardToken, vitalCardStatic } from '@bodiless/vital-card';
 
 const asGetStarted = asCardToken(
-  vitalCard.Default,
-  vitalCard.WithPrimaryButton,
-  vitalCard.WithNoEyebrow,
+  vitalCardStatic.Default,
+  vitalCardStatic.WithPrimaryButton,
+  vitalCardStatic.WithNoEyebrow,
   {
     Components: {
+      Wrapper: replaceWith(Div),
       DescriptionWrapper: replaceWith(() => null),
       ImageWrapper: replaceWith(() => null),
       Image: replaceWith(() => null),
