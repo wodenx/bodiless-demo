@@ -51,11 +51,8 @@
     "start": "lerna run start --stream --scope @sites/bodiless-demo",
     "sync:fix": "syncpack fix-mismatches",
     "sync:check": "syncpack list-mismatches",
-    "test": "jest",
-    "test:monorepo-pw": "WAIT_ON_TIMEOUT=600000 start-server-and-test sites:launch-monorepo http://localhost:8005 pw:run",
-    "test:ci": "WAIT_ON_TIMEOUT=600000 start-server-and-test sites:launch-test http://localhost:8005 cy:run",
-    "test:monorepo": "WAIT_ON_TIMEOUT=600000 start-server-and-test sites:launch-monorepo http://localhost:8005 cy:run",
-    "test:watch": "jest --watch",
+    "test": "npx playwright test --project chromium",
+    "test:report": "npx playwright show-report",    
     "docs": "lerna run build:doc --stream --scope @sites/bodiless-demo && docsify serve ./sites/bodiless-demo/doc"
   },
   "husky": {
@@ -76,6 +73,7 @@
     "symlink-dir": "^3.0.3"
   },
   "devDependencies": {
+    "@applitools/eyes-playwright": "^1.12.1",
     "@babel/core": "^7.9.0",
     "@babel/plugin-proposal-decorators": "^7.4.0",
     "@babel/plugin-transform-modules-commonjs": "7.5.0",
@@ -85,8 +83,8 @@
     "@types/jest": "^24.0.18",
     "@types/lodash": "^4.14.158",
     "@types/rc-tooltip": "^3.7.1",
-    "@types/react-dom": "^17.0.2",
     "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.2",
     "@types/slate": "^0.47.9",
     "@types/uuid": "^3.4.4",
     "@typescript-eslint/eslint-plugin": "^5.9.1",
