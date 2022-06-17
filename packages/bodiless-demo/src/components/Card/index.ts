@@ -14,8 +14,12 @@ const asGetStarted = asCardToken(
     Layout: {
       ContentWrapper: 'flex flex-col self-center',
     },
+    Spacing: {
+      Wrapper: 'py-16',
+    },
     Theme: {
       TitleWrapper: 'text-center',
+      Wrapper: 'bg-demo-table-light rounded-md',
     },
     Meta: flowHoc.meta.term('Sub Type')('Get Started'),
   }
