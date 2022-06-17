@@ -24,6 +24,7 @@ const Default = asFluidToken(
     },
   },
   ExtraPadding,
+  vitalFlowContainerBase.WithContentLibrary,
 );
 
 export default {
