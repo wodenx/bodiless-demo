@@ -4,7 +4,11 @@ snapshot:
 static:
   base-url: /
   clean-urls: false
-  include: **/*.html
-  exclude: []
+  include: [
+    '**/*.html',
+  ]
+  exclude: [
+    '/design-system/**/*.html',
+  ]
   rewrites: {}
   overrides: []  

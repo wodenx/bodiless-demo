@@ -32,6 +32,6 @@ jobs:
       - name: Build
         run: npm run build
       - name: Percy Test
-        run: npx percy snapshot ./sites/bodiless-demo/public -d
+        run: npx percy snapshot ./sites/bodiless-demo/public
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
