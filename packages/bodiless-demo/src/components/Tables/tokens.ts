@@ -25,6 +25,7 @@ const Base = asTitleTableToken(
         omit(vitalTypography.H2, 'Spacing'),
       ),
     },
+    Meta: flowHoc.meta.term('Type')('Table with Title'),
   }
 );
 
@@ -33,15 +34,14 @@ const asSecondColumnHighlightedTitle = asTitleTableToken(Base,
     Components: {
       Table: asSecondColumnHighlighted,
     },
-    Meta: flowHoc.meta.term('Table')('SecondColumnHighlighted'),
+    Meta: flowHoc.meta.term('Column Style')('Second Column Highlighted'),
   });
-
 const asThirdColumnHighlightedTitle = asTitleTableToken(Base,
   {
     Components: {
       Table: asThirdColumnHighlighted,
     },
-    Meta: flowHoc.meta.term('Table')('SecondColumnHighlighted'),
+    Meta: flowHoc.meta.term('Column Style')('Third Column Highlighted'),
   });
 
 export {
