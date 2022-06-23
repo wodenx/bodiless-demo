@@ -23,7 +23,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install
+      - name: Use Node.js v16.13
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.13        
+      - name: Setup
         run: npm run setup
       - name: Build
         run: npm run build
