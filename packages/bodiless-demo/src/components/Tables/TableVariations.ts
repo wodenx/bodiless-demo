@@ -1,7 +1,7 @@
 import {
-  addProps, as, on, withDesign, addClassesIf, and, startWith, flowHoc,
+  addProps, as, on, withDesign, addClassesIf, and, Div,
 } from '@bodiless/fclasses';
-import { withNode, withNodeKey } from '@bodiless/core';
+import { withChild, withNode, withNodeKey } from '@bodiless/core';
 import { asBodilessChameleon } from '@bodiless/components';
 import {
   asBodilessTable,
@@ -18,8 +18,22 @@ import {
 import GreenYesIcon from '../../assets/GreenYes';
 import RedNoIcon from '../../assets/RedNo';
 
+const PlainEditor = (vitalEditorPlain.Default, addProps({ placeholder: 'Cell' }))(EditorPlainClean);
+
+const CellChameleon = as(
+  asBodilessChameleon('component', { component: 'PlainEditor' }, () => ({ groupLabel: 'Cell Content', label: 'Type' })),
+  withDesign({
+    PlainEditor: withChild(PlainEditor),
+    Yes: withChild(GreenYesIcon),
+    No: withChild(RedNoIcon),
+    Editor: on(RichTextClean)(vitalRichText.Default, addProps({ placeholder: 'Cell' })),
+  }),
+);
+
 const DemoStyleTable = asTableToken({
-  Meta: flowHoc.meta.term('Type')('Table'),
+  Components: {
+    CellContent: on(Div)(CellChameleon),
+  },
   Schema: {
     _: asBodilessTable(),
     CellContent: as(withNode, withNodeKey('Cell')),
@@ -33,17 +47,6 @@ const DemoStyleTable = asTableToken({
   Spacing: {
     Cell: 'p-2',
   },
-  Editors: {
-    CellContent: as(
-      asBodilessChameleon('component', { component: 'Editor' }, () => ({ groupLabel: 'Cell Content', label: 'Type' })),
-      withDesign({
-        PlainEditor: on(EditorPlainClean)(vitalEditorPlain.Default, addProps({ placeholder: 'Cell' })),
-        Yes: startWith(GreenYesIcon),
-        No: startWith(RedNoIcon),
-        Editor: on(RichTextClean)(vitalRichText.Default, addProps({ placeholder: 'Cell' })),
-      }),
-    ),
-  },
 });
 
 const WithHighlightSecondColumn = asTableToken({
@@ -53,7 +56,6 @@ const WithHighlightSecondColumn = asTableToken({
       addClassesIf(and(useIsInHead, useIsSecondColumn))('font-extrabold italic'),
     ),
   },
-  Meta: flowHoc.meta.term('Style')('Custom Hightlighted: Second'),
 });
 
 const WithHighlightThirdColumn = asTableToken({
@@ -63,12 +65,11 @@ const WithHighlightThirdColumn = asTableToken({
       addClassesIf(and(useIsInHead, useIsThirdColumn))('font-extrabold italic'),
     ),
   },
-  Meta: flowHoc.meta.term('Style')('Custom Hightlighted: Third'),
 });
 
 const asSecondColumnHighlighted = as(
   DemoStyleTable,
-  // vitalTable.WithFlowContainerPreview,
+  vitalTable.WithFlowContainerPreview,
   vitalTable.WithBorders,
   WithHighlightSecondColumn,
 );
