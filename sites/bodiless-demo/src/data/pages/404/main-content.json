@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "uuid": "f0787b40-f3e9-11ec-8052-2d90cc4d3f16",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "RichText"
+    }
+  ]
+}

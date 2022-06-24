@@ -1,0 +1,34 @@
+[
+  {
+    "type": "H1",
+    "children": [
+      {
+        "text": "Page Not Found"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Please visit the "
+      },
+      {
+        "type": "Link",
+        "data": {
+          "slatenode": {
+            "href": "http://localhost:9000/"
+          }
+        },
+        "children": [
+          {
+            "text": "homepage"
+          }
+        ]
+      },
+      {
+        "text": "."
+      }
+    ]
+  }
+]

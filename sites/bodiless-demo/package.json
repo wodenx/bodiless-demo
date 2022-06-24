@@ -41,6 +41,7 @@
     "gatsby": "^4.11.2",
     "gatsby-plugin-canonical-urls": "^4.10.0",
     "gatsby-plugin-sitemap": "^5.10.2",
+    "gatsby-plugin-google-tagmanager": "^4.13.0",
     "glob": "^7.1.6",
     "informed": "^3.34.0",
     "lodash": "^4.17.19",
