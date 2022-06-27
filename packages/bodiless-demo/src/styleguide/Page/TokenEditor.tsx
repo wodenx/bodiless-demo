@@ -2,7 +2,9 @@ import React from 'react';
 import {
   withDesign, addClasses, flowHoc, stylable, startWith, Pre, HOC
 } from '@bodiless/fclasses';
-import { asAccordionWrapper, asAccordionTitle, asAccordionBody } from '@bodiless/accordion';
+import {
+  asAccordionWrapper, asAccordionTitle, asAccordionBody, asAccordionDefaultExpanded
+} from '@bodiless/accordion';
 import { withChild } from '@bodiless/core';
 
 export const tokenPanelStyles = {
@@ -23,6 +25,7 @@ export const withTokenEditorStyles = flowHoc(
     }),
     DetailsWrapper: flowHoc(
       asAccordionWrapper,
+      asAccordionDefaultExpanded,
       addClasses('border-demo-primary-interactive border-2'),
     ),
     DetailsTitle: flowHoc(
