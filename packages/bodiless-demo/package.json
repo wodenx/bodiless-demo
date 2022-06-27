@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@bodiless/cli": "^v1.0.0-rc.8",
+    "@bodiless/accordion": "^v1.0.0-rc.8",
     "@bodiless/components": "^v1.0.0-rc.8",
     "@bodiless/components-ui": "^v1.0.0-rc.8",
     "@bodiless/core": "^v1.0.0-rc.8",
@@ -41,6 +42,8 @@
     "@bodiless/richtext": "^v1.0.0-rc.8",
     "@bodiless/richtext-ui": "^v1.0.0-rc.8",
     "@bodiless/table": "^v1.0.0-rc.8",
+    "@bodiless/tokens": "^v1.0.0-rc.8",
+    "@bodiless/vital-accordion": "^v1.0.0-rc.8",
     "@bodiless/vital-buttons": "^v1.0.0-rc.8",
     "@bodiless/vital-card": "^v1.0.0-rc.8",
     "@bodiless/vital-content-listing": "^v1.0.0-rc.8",

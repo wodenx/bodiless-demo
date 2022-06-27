@@ -3,7 +3,39 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "The variations of the Card component are shown below."
+        "text": "The tokens can be explored by clicking on Components then choosing "
+      },
+      {
+        "text": "Tokens | Select",
+        "Bold": true
+      },
+      {
+        "text": " and checking/unchecking tokens."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Visit "
+      },
+      {
+        "data": {
+          "openModal": true,
+          "slatenode": {
+            "href": "https://johnsonandjohnson.github.io/Bodiless-JS/#/Development/API/@bodiless/vital-card/interfaces/VitalCard"
+          }
+        },
+        "type": "Link",
+        "children": [
+          {
+            "text": "VitalCard Docs API"
+          }
+        ]
+      },
+      {
+        "text": " for more information on each token."
       }
     ]
   }
