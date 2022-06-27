@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "uuid": "Button-70cb9edf267bc9787ef560689c650e47",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "Button"
+    }
+  ]
+}
