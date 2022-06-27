@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "uuid": "3ecb1310-f652-11ec-bbf5-35b20e652e88",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "List"
+    }
+  ]
+}

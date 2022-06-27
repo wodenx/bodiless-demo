@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "uuid": "019f1e90-f64e-11ec-b13a-e1daa5745fd3",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "Accordion"
+    }
+  ]
+}
