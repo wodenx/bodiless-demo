@@ -33,13 +33,11 @@ const {
   List,
   Accordion,
   Buttons,
-  _default
 } = VitalTestStyleGuideTemplate;
 
 const Default = asFluidToken({
   ...vitalPage.Default,
   Components: {
-    _default,
     ContentListing,
     ContentListingMultiple,
     Editors,
