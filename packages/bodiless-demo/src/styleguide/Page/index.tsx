@@ -18,7 +18,6 @@ import { VitalTestStyleGuideTemplate } from './StyleGuideTemplate';
 
 const {
   ContentListing,
-  ContentListingMultiple,
   Editors,
   EditorsMonoFont,
   Typography,
@@ -39,7 +38,6 @@ const Default = asFluidToken({
   ...vitalPage.Default,
   Components: {
     ContentListing,
-    ContentListingMultiple,
     Editors,
     EditorsMonoFont,
     Typography,

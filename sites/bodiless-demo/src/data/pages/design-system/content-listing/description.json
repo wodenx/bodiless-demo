@@ -3,24 +3,26 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "This page demonstrates the content listing page with a single allowed filter.  The content and fiters are site-wide.  This page has no default filters definedAnothe view on the same content, with a default filter, can be found at "
+        "text": "The tokens can be explored by clicking on  the component then choosing "
       },
       {
-        "data": {
-          "openModal": true,
-          "slatenode": {
-            "href": "/styleguide/content-listing-2/"
-          }
-        },
-        "type": "Link",
-        "children": [
-          {
-            "text": "/styleguide/content-listing-2"
-          }
-        ]
+        "text": "Tokens | Select",
+        "Bold": true
       },
       {
-        "text": ""
+        "text": " and checking/unchecking tokens."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "API Doc: "
+      },
+      {
+        "text": "TBD",
+        "Bold": true
       }
     ]
   }
