@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "uuid": "62563970-f64f-11ec-a6c5-ef3632e8c620",
+      "wrapperProps": {
+        "className": "w-full lg:w-1/2"
+      },
+      "type": "Video"
+    }
+  ]
+}
