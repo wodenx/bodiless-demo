@@ -26,7 +26,7 @@ export const GitDiscuss = () => (
 );
 
 export const GitButtons = () => (
-  <div>
+  <div className="github-buttons">
     <GitStar />
     <span className="p-2" />
     <GitDiscuss />

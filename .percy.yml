@@ -1,6 +1,7 @@
 version: 2
 snapshot:
   widths: [1440]
+  percy-css: '.github-buttons { display: none; }'
 static:
   base-url: /
   clean-urls: false

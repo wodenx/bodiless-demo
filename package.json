@@ -52,7 +52,8 @@
     "sync:fix": "syncpack fix-mismatches",
     "sync:check": "syncpack list-mismatches",
     "test": "npx playwright test --project chromium",
-    "test:report": "npx playwright show-report",    
+    "test:report": "npx playwright show-report",
+    "snapshot": "npx percy snapshot ./sites/bodiless-demo/public",  
     "docs": "lerna run build:doc --stream --scope @sites/bodiless-demo && docsify serve ./sites/bodiless-demo/doc"
   },
   "husky": {
