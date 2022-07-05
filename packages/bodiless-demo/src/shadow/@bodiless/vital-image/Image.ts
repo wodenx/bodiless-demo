@@ -13,13 +13,16 @@
  */
 
 import { vitalImageBase, asImageToken } from '@bodiless/vital-image';
-import { addProps } from '@bodiless/fclasses';
 
+/*
 const Default = asImageToken(vitalImageBase.Plain, {
   Behavior: {
     _: addProps({ 'data-shadowed-by': '__vital__:Image:Plain' }),
   },
 });
+*/
+
+const Default = asImageToken(vitalImageBase.Default);
 
 const vitalImage: typeof vitalImageBase = {
   ...vitalImageBase,
