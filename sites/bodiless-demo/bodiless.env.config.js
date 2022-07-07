@@ -12,7 +12,7 @@ const getCurrentGitBranch = () => {
     console.warn('Could not determine current branch');
     return '';
   }
-}
+};
 
 module.exports = {
   configure: async (defaultConfig) => {
