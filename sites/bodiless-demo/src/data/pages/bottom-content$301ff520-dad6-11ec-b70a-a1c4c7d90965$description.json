@@ -3,7 +3,46 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "Page building and content maintenance are performed via a visual admin interface using the components that are included in Bodiless or have been added. Render is performed in real time."
+        "text": "An intuitive, inline editing experience allows you to see what content will look like on your site as you edit it.  Fidelity is guaranteed, because you edit using the same components which will render your content in  production."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "All editing code is removed from the production bundle, keeping your site lean and performant,"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Click the "
+      },
+      {
+        "text": "Edit This Page",
+        "Bold": true
+      },
+      {
+        "text": " button at the top of the page to try it out!"
       }
     ]
   }
