@@ -3,6 +3,8 @@ import { vitalSpacing } from '@bodiless/vital-elements';
 import {
   as, replaceWith, Fragment
 } from '@bodiless/fclasses';
+import { withPrependChild } from '@bodiless/core';
+import { vitalRichText, RichTextClean } from '@bodiless/vital-editors';
 
 const NoTopContent = asGenericTemplateToken(
   vitalGenericTemplateBase.Base,
@@ -16,6 +18,17 @@ const NoTopContent = asGenericTemplateToken(
     },
   }
 );
+
+const Description = as(vitalRichText.Default)(RichTextClean);
+
+const ContentListing = asGenericTemplateToken(
+  vitalGenericTemplateBase.ContentListing,
+  {
+    Components: {
+      ContentWrapper: withPrependChild(Description, 'Description'),
+    }
+  }
+)
 
 const Generic = asGenericTemplateToken(
   vitalGenericTemplateBase.Generic,
@@ -32,6 +45,7 @@ const Generic = asGenericTemplateToken(
 export default {
   ...vitalGenericTemplateBase,
   Generic,
+  ContentListing,
 };
 
 export {

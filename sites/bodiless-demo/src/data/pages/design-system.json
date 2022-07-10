@@ -1,0 +1,33 @@
+[
+  {
+    "type": "H4",
+    "children": [
+      {
+        "text": "A foundational set of components to get your site off the ground fast."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Each component can be used out of the box with minimal theming, or extended and customized to match almost any design.  All are fully editable, and implemented with best-in-class accessibility, SEO and performance in mind."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "By the way - this page is an exmple of the built-in Bodiless content listing component.  Click the "
+      },
+      {
+        "text": "Edit This Page",
+        "Bold": true
+      },
+      {
+        "text": " button at the top to see how it works!"
+      }
+    ]
+  }
+]
