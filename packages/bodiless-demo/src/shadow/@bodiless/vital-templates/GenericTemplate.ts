@@ -28,7 +28,7 @@ const ContentListing = asGenericTemplateToken(
       ContentWrapper: withPrependChild(Description, 'Description'),
     }
   }
-)
+);
 
 const Generic = asGenericTemplateToken(
   vitalGenericTemplateBase.Generic,
