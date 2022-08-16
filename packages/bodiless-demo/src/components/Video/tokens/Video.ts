@@ -11,7 +11,7 @@ const Default = asVideoToken({
     Video: 'w-full',
   },
   Content: {
-    Video: addProps({ loop: 'true', autoplay: 'true' }),
+    Video: addProps({ loop: true /* autoplay: 'true' */}),
   },
   Schema: {
     Video: withNodeKey('video'),
