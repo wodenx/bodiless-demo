@@ -17,7 +17,6 @@ const Basic = asCardToken(vitalCardBase.Basic, {
   },
   Theme: {
     ImageWrapper: 'md:mx-16',
-    //TitleWrapper: vitalTypography.H2,
   },
 });
 
