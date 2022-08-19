@@ -4,8 +4,8 @@ import { useRef, useEffect } from 'react';
 
 // @ts-ignore:  TS7006: Parameter 'entries' implicitly has an 'any' type.
 const useVideoAutoPlayback = options => {
-  const containerRef = useRef(null);
-  const videoRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   // @ts-ignore:  TS7006: Parameter 'entries' implicitly has an 'any' type.
   const cb = entries => {
