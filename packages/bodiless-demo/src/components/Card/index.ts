@@ -1,7 +1,7 @@
 import {
   Div, flowHoc, on, replaceWith, H2, extendMeta,
 } from '@bodiless/fclasses';
-import { asCardToken, vitalCardStatic } from '@bodiless/vital-card';
+import { asCardToken, vitalCardStatic, vitalCard } from '@bodiless/vital-card';
 import { vitalTypography } from '@bodiless/vital-elements';
 import { VideoClean, VideoTokens } from '../Video';
 
@@ -32,7 +32,8 @@ const asGetStarted = asCardToken(
 
 const VideoCardDefault = asCardToken(
   {
-    ...vitalCardStatic.Base,
+    // Extend vitalCard (not vitalCardStatic) bc we must hydrate to enable auto-play.
+    ...vitalCard.Base,
     Components: {
       Image: on(VideoClean)(VideoTokens.Default),
       CTAWrapper: replaceWith(() => null),
@@ -51,9 +52,9 @@ const VideoCardDefault = asCardToken(
 
 const asVideoCard = asCardToken(
   VideoCardDefault,
-  vitalCardStatic.WithHorizontalLeftOrientation,
-  vitalCardStatic.WithHorizontalContentCentered,
-  vitalCardStatic.WithNoEyebrow,
+  vitalCard.WithHorizontalLeftOrientation,
+  vitalCard.WithHorizontalContentCentered,
+  vitalCard.WithNoEyebrow,
 );
 
 export {
