@@ -33,7 +33,7 @@ const VideoBase = (props: Props) => {
   return (
     // Both `Wrapper` and `Video` are `stylable` elements which accept a `forwardRef`
     // prop and pass it as a ref to the underlying html element.
-    // @see https://github.com/johnsonandjohnson/Bodiless-JS/blob/main/packages/fclasses/src/addClasses.tsx 
+    // @see https://github.com/johnsonandjohnson/Bodiless-JS/blob/main/packages/fclasses/src/addClasses.tsx
     <C.Wrapper forwardRef={containerRef}>
       <C.Video forwardRef={videoRef} muted="muted">
         Sorry, your browser does not support videos
