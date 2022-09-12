@@ -5,7 +5,7 @@ import { useNode } from '@bodiless/core';
 
 export const EDIT_HOST = process.env.BL_EDIT_HOST || 'edit.main-bvxea6i-4qnlbnsncvzug.ca-1.platformsh.site';
 // @todo this should chage to our friendly url.
-export const STATIC_HOST = process.env.BL_STATIC_HOST || 'main-bvxea6i-4qnlbnsncvzug.ca-1.platformsh.site';
+export const STATIC_HOST = process.env.BL_STATIC_HOST || 'neon-caramel-1c470e.netlify.app';
 
 export const withEditPageHref: HOC = Component => props => {
   const { node } = useNode();
