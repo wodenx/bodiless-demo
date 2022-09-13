@@ -6,13 +6,6 @@
         "className": "w-full"
       },
       "type": "StyledEditorBorder"
-    },
-    {
-      "uuid": "2907ba80-1d8d-11ed-a953-3361388a1a6b",
-      "wrapperProps": {
-        "className": "w-full"
-      },
-      "type": "Video"
     }
   ]
 }
