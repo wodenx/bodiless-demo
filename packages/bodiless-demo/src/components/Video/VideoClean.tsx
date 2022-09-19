@@ -40,14 +40,6 @@ const VideoBase = (props: Props) => {
       </C.Video>
     </C.Wrapper>
   );
-
-  return (
-    <C.Wrapper>
-      <C.Video>
-        Sorry, your browser does not support videos
-      </C.Video>
-    </C.Wrapper>
-  );
 };
 
 const VideoClean = designable(videoComponents, 'Video')(VideoBase);

@@ -10,10 +10,10 @@ const useVideoAutoPlayback = options => {
   // @ts-ignore:  TS7006: Parameter 'entries' implicitly has an 'any' type.
   const cb = entries => {
     const [entry] = entries;
-    // @ts-ignore:Object is possibly 'null'.
-    if (entry.isIntersecting) videoRef.current.play();
-    // @ts-ignore: Object is possibly 'null'.
-    else videoRef.current.pause();
+    if (videoRef.current) {
+      if (entry.isIntersecting) videoRef.current!.play();
+      else videoRef.current!.pause();
+    }
   };
   useEffect(() => {
     const observer = new IntersectionObserver(cb, options);
