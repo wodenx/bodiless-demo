@@ -11,7 +11,7 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "The features are compared to other non-cms JAMStack."
+        "text": "These days, \"no-cms\" site building frameworks are becoming more and more common.  Bodiless was one of the first, and has been under intensive development for nearly four years.  As a result, it's packed with features which are hard to find in similar systems."
       }
     ]
   }

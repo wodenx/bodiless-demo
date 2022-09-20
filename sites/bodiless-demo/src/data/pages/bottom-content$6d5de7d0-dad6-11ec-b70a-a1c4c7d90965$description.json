@@ -3,7 +3,7 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "Included in the package is a standard header nav with dropdowns, utility nav in header, footer nav, and mobile nav."
+        "text": "Included in the package is a standard header nav with dropdowns, utility nav in header, footer nav, and mobile nav.  All are inline-editable, and breadcrumbs are generated automatically."
       }
     ]
   }

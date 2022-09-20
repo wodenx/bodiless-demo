@@ -3,7 +3,7 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "A number of layout and functional components are bundled into the Bodiless Package as an extensible design system known as Vital DS, reducing build time."
+        "text": "More than just a site editor, Bodiless-JS includes advanced tooling for implementing and extending design systems.  The bundled VitalDS provides a  foundation set of layout and functional components, jump-starting your site-build while allowing you infinite customization to realize your individual vision."
       }
     ]
   }
