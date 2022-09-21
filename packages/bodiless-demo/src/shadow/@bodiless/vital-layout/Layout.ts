@@ -1,10 +1,11 @@
-import { asLayoutToken, vitalHeader, vitalLayoutBase } from '@bodiless/vital-layout';
-import asBodilessDemoFooter from '../../../components/Footer';
+import {
+  asLayoutToken, vitalFooter, vitalHeader, vitalLayoutBase
+} from '@bodiless/vital-layout';
 
 const Default = asLayoutToken(vitalLayoutBase.Base, {
   Components: {
     Header: vitalHeader.Default,
-    Footer: asBodilessDemoFooter,
+    Footer: vitalFooter.Default,
   },
 });
 

@@ -1,13 +1,14 @@
 import { replaceWith, Div, on } from '@bodiless/fclasses';
 import {
-  asFooterToken, vitalFooter, CopyrightRowClean, vitalCopyrightRow,
+  asFooterToken, CopyrightRowClean, vitalCopyrightRow, vitalFooterBase
 } from '@bodiless/vital-layout';
-import { GitButtons } from '../GitHubButtons';
+import { vitalMenu } from '@bodiless/vital-navigation';
+import { GitButtons } from '../../../components/GitHubButtons';
 
-const asBodilessDemoFooter = asFooterToken({
-  ...vitalFooter.Base,
+const Default = asFooterToken({
+  ...vitalFooterBase.Base,
   Components: {
-    ...vitalFooter.Base.Components,
+    FooterMenu: vitalMenu.Footer,
     Column1Wrapper: replaceWith(Div),
     RewardsWrapper: replaceWith(Div),
     Rewards: replaceWith(GitButtons),
@@ -23,10 +24,13 @@ const asBodilessDemoFooter = asFooterToken({
     Column2Wrapper: 'w-full md:w-2/3',
   },
   Spacing: {
-    ...vitalFooter.Base.Spacing,
+    ...vitalFooterBase.Base.Spacing,
     Column1Wrapper: 'py-9',
     CopyrightRowOutsideColumns: 'w-full',
   },
 });
 
-export default asBodilessDemoFooter;
+export default {
+  ...vitalFooterBase,
+  Default,
+};
