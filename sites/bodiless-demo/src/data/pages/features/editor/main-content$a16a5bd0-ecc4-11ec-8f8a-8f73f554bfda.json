@@ -1,0 +1,25 @@
+[
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Bodiless Editor"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Fully "
+      },
+      {
+        "text": "wysiwyg",
+        "Bold": true
+      },
+      {
+        "text": " editor."
+      }
+    ]
+  }
+]
