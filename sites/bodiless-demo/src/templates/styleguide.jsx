@@ -1,9 +1,14 @@
 import { graphql } from 'gatsby';
 import { StyleGuideTemplateClean } from '@bodiless/vital-templates';
 import { as } from '@bodiless/fclasses';
-import { VitalTestStyleGuidePage } from '../../../../packages/bodiless-demo';
 
-const StyleGuidePage = as(VitalTestStyleGuidePage.Default)(StyleGuideTemplateClean);
+// Break styleguides to try deploy.
+// Gatsby cloud logs error with
+// "Can't resolve 'bodiless-demo' in '/usr/src/app/www/sites/bodiless-demo/src/templates'""
+// import { VitalTestStyleGuidePage } from 'bodiless-demo';
+import { vitalPage } from '@bodiless/vital-templates';
+
+const StyleGuidePage = as(vitalPage.Default)(StyleGuideTemplateClean);
 
 export default StyleGuidePage;
 
