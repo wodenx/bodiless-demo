@@ -74,6 +74,13 @@ const plugins = [
     options: { excludes: disabledPages },
   },
   {
+    resolve: 'gatsby-plugin-google-tagmanager',
+    options: {
+      id: 'GTM-N3M9LLD',
+      dataLayerName: 'globalDataLayer',
+    },
+  },
+  {
     resolve: 'bodiless-demo',
   }
 ];

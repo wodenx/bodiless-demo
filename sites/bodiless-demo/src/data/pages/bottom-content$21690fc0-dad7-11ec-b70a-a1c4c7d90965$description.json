@@ -3,7 +3,7 @@
     "type": "paragraph",
     "children": [
       {
-        "text": "An out of the box lightweight client-side feature to help users find content on the site."
+        "text": "Comes with an out of the box lightweight client-side feature based on lunr-js to help users find content on the site."
       }
     ]
   }

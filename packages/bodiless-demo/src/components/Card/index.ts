@@ -1,13 +1,31 @@
-import { as, flowHoc, removeClasses } from '@bodiless/fclasses';
-import { asCardToken, vitalCardBase } from '@bodiless/vital-card';
+import { Div, flowHoc, replaceWith } from '@bodiless/fclasses';
+import { asCardToken, vitalCardStatic } from '@bodiless/vital-card';
 
-export const WithHorizontalRightOrientation = asCardToken(vitalCardBase.WithHorizontalOrientation, {
-  Layout: {
-    Wrapper: as(
-      'md:flex-row-reverse',
-      // This is annoying.  We really should have this card variation available as its common use.
-      removeClasses('md:flex-row flex-col'),
-    ),
-  },
-  Meta: flowHoc.meta.term('Orientation')('Horizontal - Image Right'),
-});
+const asGetStarted = asCardToken(
+  vitalCardStatic.Default,
+  vitalCardStatic.WithPrimaryButton,
+  vitalCardStatic.WithNoEyebrow,
+  {
+    Components: {
+      Wrapper: replaceWith(Div),
+      DescriptionWrapper: replaceWith(() => null),
+      ImageWrapper: replaceWith(() => null),
+      Image: replaceWith(() => null),
+    },
+    Layout: {
+      ContentWrapper: 'flex flex-col self-center',
+    },
+    Spacing: {
+      Wrapper: 'py-16',
+    },
+    Theme: {
+      TitleWrapper: 'text-center',
+      Wrapper: 'bg-demo-table-light rounded-md',
+    },
+    Meta: flowHoc.meta.term('Sub Type')('Get Started'),
+  }
+);
+
+export {
+  asGetStarted,
+};
