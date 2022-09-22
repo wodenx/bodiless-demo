@@ -14,8 +14,9 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  percy-snapshot:
+    # The type of runner that the job will if PR contains [snapshot]
+    if: ${{ contains(github.event.pull_request.title, '[snapshot]') }}
     runs-on: ubuntu-latest
     environment: Test
 
