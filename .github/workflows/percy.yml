@@ -2,7 +2,7 @@
 
 name: CI
 
-# Controls when the workflow will run
+# Controls when the workflow will run any PR with [snapshot] in PR title
 on:
   pull_request:
     branches:
