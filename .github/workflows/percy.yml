@@ -16,7 +16,7 @@ jobs:
   # This workflow contains a single job called "build"
   percy-snapshot:
     # The type of runner that the job will if PR contains [snapshot]
-    if: ${{ contains(github.event.pull_request.title, '[snapshot]') }}
+    if: ${{ github.ref == 'main' || contains(github.event.pull_request.title, '[snapshot]') }}
     runs-on: ubuntu-latest
     environment: Test
 
