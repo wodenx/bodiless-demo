@@ -7,7 +7,7 @@ const useVideoAutoPlayback = options => {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // catching the unmounted error
+  // Catching the unmounted error
   if (!containerRef || !videoRef) return [null, null];
 
   // @ts-ignore:  TS7006: Parameter 'entries' implicitly has an 'any' type.
