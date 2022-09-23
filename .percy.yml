@@ -1,14 +1,12 @@
 version: 2
 snapshot:
-  widths: [1440]
+  widths: [640, 1440]
 static:
   base-url: /
   clean-urls: false
   include: [
     '**/*.html',
   ]
-  exclude: [
-    '/design-system/**/*.html',
-  ]
+  exclude: []
   rewrites: {}
   overrides: []  
