@@ -15,7 +15,9 @@ const Variations = (props: any) => (
 );
 
 export const Buttons = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
-  Meta: flowHoc.meta.term('Token')('Buttons'),
+  Meta: {
+    title: 'Styleguide: Buttons',
+  },
   Content: {
     Title: replaceWith(() => <>Buttons</>),
     Examples: replaceWith(Variations),

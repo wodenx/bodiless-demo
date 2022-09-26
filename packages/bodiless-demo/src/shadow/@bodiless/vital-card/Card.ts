@@ -2,7 +2,7 @@ import { H2, replaceWith } from '@bodiless/fclasses';
 import { asCardToken, vitalCardBase } from '@bodiless/vital-card';
 import { vitalTypography } from '@bodiless/vital-elements';
 
-const HeroMargin = asCardToken({
+const HeroCenter = asCardToken({
   Theme: {
     Wrapper: 'mt-8',
     CTAWrapper: 'mx-auto max-w-xs',
@@ -26,11 +26,11 @@ const Hero = asCardToken(
   vitalCardBase.WithHorizontalContentCentered,
   vitalCardBase.WithHorizontalLeftOrientation,
   vitalCardBase.WithPrimaryButton,
-  HeroMargin,
 );
 
 export default {
   ...vitalCardBase,
   Hero,
   Basic,
+  HeroCenter,
 };

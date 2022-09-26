@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "uuid": "e98f9b90-3dd3-11ed-95ab-e1dd63cefdea",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "BurgerMenu"
+    },
+    {
+      "uuid": "61e63880-3deb-11ed-bb08-f10c44190495",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "Menu"
+    },
+    {
+      "uuid": "50dadbd0-3dec-11ed-aa27-8d1e10abe0e0",
+      "wrapperProps": {
+        "className": "w-full lg:w-3/4"
+      },
+      "type": "Menu"
+    },
+    {
+      "uuid": "682f2610-3dec-11ed-aa27-8d1e10abe0e0",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "Menu"
+    }
+  ]
+}

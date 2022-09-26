@@ -15,7 +15,9 @@ const Variations = (props: any) => (
 );
 
 export const Accordion = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
-  Meta: flowHoc.meta.term('Token')('Accordion'),
+  Meta: {
+    title: 'Styleguide: Accordion',
+  },
   Content: {
     Title: replaceWith(() => <>Accordion</>),
     Examples: replaceWith(Variations),
