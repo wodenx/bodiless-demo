@@ -3,7 +3,9 @@ import type { TokenEditorComponentDef } from '@bodiless/tokens';
 import {
   withDesign, HOC, flowHoc, as
 } from '@bodiless/fclasses';
-import { BurgerMenuClean, vitalBurgerMenu, withBurgerMenuProvider, asBurgerMenuToken } from '@bodiless/vital-navigation';
+import {
+  BurgerMenuClean, vitalBurgerMenu, withBurgerMenuProvider, asBurgerMenuToken
+} from '@bodiless/vital-navigation';
 import * as styleTokens from './token';
 import { tokenPanelStyles, withTokenEditorStyles } from '../../TokenEditor';
 

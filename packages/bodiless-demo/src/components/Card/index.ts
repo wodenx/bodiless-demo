@@ -1,4 +1,6 @@
-import { Div, extendMeta, flowHoc, replaceWith } from '@bodiless/fclasses';
+import {
+  Div, extendMeta, flowHoc, replaceWith
+} from '@bodiless/fclasses';
 import { asCardToken, vitalCardStatic } from '@bodiless/vital-card';
 
 const asGetStarted = asCardToken(
