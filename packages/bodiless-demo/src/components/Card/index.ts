@@ -1,4 +1,4 @@
-import { Div, flowHoc, replaceWith } from '@bodiless/fclasses';
+import { Div, extendMeta, flowHoc, replaceWith } from '@bodiless/fclasses';
 import { asCardToken, vitalCardStatic } from '@bodiless/vital-card';
 
 const asGetStarted = asCardToken(
@@ -22,7 +22,10 @@ const asGetStarted = asCardToken(
       TitleWrapper: 'text-center',
       Wrapper: 'bg-demo-table-light rounded-md',
     },
-    Meta: flowHoc.meta.term('Sub Type')('Get Started'),
+    Meta: extendMeta(
+      flowHoc.meta.term('Sub Type')('Get Started'),
+      flowHoc.meta.term('Orientation')('Horizontal'),
+    ),
   }
 );
 
