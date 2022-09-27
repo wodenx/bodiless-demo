@@ -3,7 +3,7 @@ import { asFluidToken } from '@bodiless/vital-elements';
 import { vitalFlowContainerBase } from '@bodiless/vital-flowcontainer';
 import { CardStatic, CardClean } from '@bodiless/vital-card';
 import { StyledEditor, StyledEditorClean } from '../../../components/StyledEditor';
-import { asGetStarted, asVideoCard } from '../../../components/Card';
+import { asGetStarted, asVideoCard, withGreyBackground, withGradientBackground } from '../../../components/Card';
 import { TitleTableClean, asSecondColumnHighlightedTitle, asThirdColumnHighlightedTitle } from '../../../components/Tables';
 import { VideoClean, VideoTokens } from '../../../components/Video';
 
@@ -19,7 +19,8 @@ const Default = asFluidToken(
     Components: {
       ...vitalFlowContainerBase.Default.Components,
       StyledEditorBorder: on(StyledEditorClean)(StyledEditor.Borders),
-      GetStarted: on(CardStatic)(asGetStarted),
+      GetStarted: on(CardStatic)(asGetStarted, withGreyBackground),
+      GetStartedGradient: on(CardStatic)(asGetStarted, withGradientBackground),
       // Use CardClean not CardStatic to hydrate the card so that video auto-play will work.
       VideoCard: on(CardClean)(asVideoCard),
       SecondHighlightedTable: on(TitleTableClean)(asSecondColumnHighlightedTitle),

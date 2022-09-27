@@ -24,11 +24,24 @@ const asGetStarted = asCardToken(
     },
     Theme: {
       TitleWrapper: 'text-center',
-      Wrapper: 'bg-demo-table-light rounded-md',
+      Wrapper: 'rounded-md',
     },
     Meta: flowHoc.meta.term('Sub Type')('Get Started'),
   }
 );
+
+const withGreyBackground = asCardToken({
+  Theme: {
+    Wrapper: 'bg-demo-table-light',
+  },
+  Meta: flowHoc.meta.term('Features')('Grey Background'),
+});
+const withGradientBackground = asCardToken({
+  Theme: {
+    Wrapper: 'bg-gradient-to-r from-demo-primary-interactive via-demo-accent to-demo-primary-interactive',
+  },
+  Meta: flowHoc.meta.term('Features')('Gradient Background'),
+});
 
 const VideoCardDefault = asCardToken(
   {
@@ -59,5 +72,7 @@ const asVideoCard = asCardToken(
 
 export {
   asGetStarted,
+  withGreyBackground,
+  withGradientBackground,
   asVideoCard,
 };
