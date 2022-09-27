@@ -31,6 +31,16 @@ const asGetStarted = asCardToken(
   }
 );
 
+const HeroCenter = asCardToken({
+  Theme: {
+    Wrapper: 'mt-8',
+    CTAWrapper: 'mx-auto max-w-xs',
+    TitleWrapper: 'text-center',
+    DescriptionWrapper: 'text-center',
+  },
+});
+
 export {
   asGetStarted,
+  HeroCenter,
 };

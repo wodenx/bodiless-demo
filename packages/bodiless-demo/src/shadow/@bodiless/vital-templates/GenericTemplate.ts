@@ -5,8 +5,8 @@ import {
 } from '@bodiless/fclasses';
 import { withPrependChild } from '@bodiless/core';
 import { vitalRichText, RichTextClean } from '@bodiless/vital-editors';
-import { CardStatic } from '@bodiless/vital-card';
-import vitalCardShadowed from '../vital-card/Card';
+import { CardStatic, vitalCard } from '@bodiless/vital-card';
+import { HeroCenter } from '../../../components/Card';
 
 const NoTopContent = asGenericTemplateToken(
   vitalGenericTemplateBase.Base,
@@ -30,7 +30,7 @@ const ContentListing = asGenericTemplateToken(
       ContentWrapper: withPrependChild(Description, 'Description'),
       TopContent: as(
         withDesign({
-          HeroCard: on(CardStatic)(vitalCardShadowed.Basic),
+          HeroCard: on(CardStatic)(vitalCard.Basic),
         }),
       ),
     }
@@ -49,7 +49,7 @@ const Generic = asGenericTemplateToken(
     Components: {
       TopContent: as(
         withDesign({
-          HeroCard: on(CardStatic)(vitalCardShadowed.HeroCenter),
+          HeroCard: on(CardStatic)(HeroCenter),
         }),
       ),
     },
