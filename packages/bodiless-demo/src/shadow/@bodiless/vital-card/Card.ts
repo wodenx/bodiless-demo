@@ -1,6 +1,6 @@
 import { H2, replaceWith } from '@bodiless/fclasses';
 import { asCardToken, vitalCardBase } from '@bodiless/vital-card';
-import { vitalTypography } from '@bodiless/vital-elements';
+// import { vitalTypography } from '@bodiless/vital-elements';
 
 const HeroMargin = asCardToken({
   Theme: {
@@ -17,7 +17,6 @@ const Basic = asCardToken(vitalCardBase.Basic, {
   },
   Theme: {
     ImageWrapper: 'md:mx-16',
-    TitleWrapper: vitalTypography.H1,
   },
 });
 
