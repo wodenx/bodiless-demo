@@ -55,6 +55,13 @@
         "className": "w-full"
       },
       "type": "ContentLibrary:GetStarted:79017ba0-e76b-11ec-bfd7-3fdc34ecc976"
+    },
+    {
+      "uuid": "8667c960-3e83-11ed-81db-9dcf92261e59",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "GetStartedGradient"
     }
   ]
 }

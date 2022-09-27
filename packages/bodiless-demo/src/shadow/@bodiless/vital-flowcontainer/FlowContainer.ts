@@ -3,7 +3,9 @@ import { asFluidToken } from '@bodiless/vital-elements';
 import { vitalFlowContainerBase } from '@bodiless/vital-flowcontainer';
 import { CardStatic, CardClean } from '@bodiless/vital-card';
 import { StyledEditor, StyledEditorClean } from '../../../components/StyledEditor';
-import { asGetStarted, asVideoCard, withGreyBackground, withGradientBackground } from '../../../components/Card';
+import {
+  asGetStarted, asVideoCard, withGreyBackground, withGradientBackground
+} from '../../../components/Card';
 import { TitleTableClean, asSecondColumnHighlightedTitle, asThirdColumnHighlightedTitle } from '../../../components/Tables';
 import { VideoClean, VideoTokens } from '../../../components/Video';
 
