@@ -192,6 +192,7 @@ full_deploy () {
   if [[ ${PLATFORM_BRANCH} =~ ^pr- ]]; then
     ${CMD_GIT} -c credential.helper="!f() { sleep 5; echo username=${APP_GIT_USER}; echo password=${APP_GIT_PW}; }; f" clone ${APP_GIT_REMOTE_URL} ${ROOT_DIR}
     cd ${ROOT_DIR}
+    CHECKOUT=0
     ID=$(echo $PLATFORM_BRANCH | sed s/pr-//g)
     PR_BRANCH_INFO=$(get_pr_source_branch ${CMD_GIT} ${ID} ${APP_GIT_REMOTE_URL} ${APP_GIT_PW})
     if [ $? == 0 ];then
@@ -201,15 +202,16 @@ full_deploy () {
       if [ ${HEAD_REPO_ID} == ${BASE_REPO_ID} ]; then
         # Checkout PR source branch instead of PR head ref.
         ${CMD_GIT} checkout -b ${SOURCE_BRANCH} origin/${SOURCE_BRANCH}
+        CHECKOUT=1
       fi
     fi
-    ${CMD_GIT} status > /dev/null 2>&1
-    if [ $? != 0 ];then
+    if [ ${CHECKOUT} == 0 ];then
       # If failed to checkout by source branch, i.e. non-github repo, github API error,
       # missing shell commands, or this is a cross repo PR, then checkout by head ref.
       ${CMD_GIT} fetch origin pull/${ID}/head:${PLATFORM_BRANCH}
       ${CMD_GIT} checkout ${PLATFORM_BRANCH}
     fi
+    ${CMD_GIT} status
   else
     ${CMD_GIT} -c credential.helper="!f() { sleep 5; echo username=${APP_GIT_USER}; echo password=${APP_GIT_PW}; }; f" clone -b ${PLATFORM_BRANCH} ${APP_GIT_REMOTE_URL} ${ROOT_DIR}
     cd ${ROOT_DIR}
