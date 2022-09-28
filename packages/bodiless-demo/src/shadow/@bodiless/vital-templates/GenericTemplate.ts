@@ -21,13 +21,10 @@ const NoTopContent = asGenericTemplateToken(
   }
 );
 
-const Description = as(vitalRichText.Default)(RichTextClean);
-
 const ContentListing = asGenericTemplateToken(
   vitalGenericTemplateBase.ContentListing,
   {
     Components: {
-      ContentWrapper: withPrependChild(Description, 'Description'),
       TopContent: as(
         withDesign({
           HeroCard: on(CardStatic)(vitalCard.Basic),
