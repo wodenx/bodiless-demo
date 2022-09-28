@@ -15,7 +15,9 @@ const Variations = (props: any) => (
 );
 
 export const Table = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
-  Meta: flowHoc.meta.term('Token')('Table'),
+  Meta: {
+    title: 'Styleguide: Table',
+  },
   Content: {
     Title: replaceWith(() => <>Table</>),
     Examples: replaceWith(Variations),

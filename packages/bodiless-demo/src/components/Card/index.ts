@@ -26,9 +26,21 @@ const asGetStarted = asCardToken(
       TitleWrapper: 'text-center',
       Wrapper: 'bg-demo-table-light rounded-md',
     },
-    Meta: flowHoc.meta.term('Sub Type')('Get Started'),
+    Meta: extendMeta(
+      flowHoc.meta.term('Sub Type')('Get Started'),
+      flowHoc.meta.term('Orientation')('Horizontal'),
+    ),
   }
 );
+
+const HeroCenter = asCardToken({
+  Theme: {
+    Wrapper: 'mt-8',
+    CTAWrapper: 'mx-auto max-w-xs',
+    TitleWrapper: 'text-center',
+    DescriptionWrapper: 'text-center',
+  },
+});
 
 const VideoCardDefault = asCardToken(
   {
@@ -59,5 +71,6 @@ const asVideoCard = asCardToken(
 
 export {
   asGetStarted,
+  HeroCenter,
   asVideoCard,
 };
