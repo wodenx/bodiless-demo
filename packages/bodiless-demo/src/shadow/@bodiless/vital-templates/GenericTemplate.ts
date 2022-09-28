@@ -3,8 +3,6 @@ import { vitalSpacing } from '@bodiless/vital-elements';
 import {
   as, replaceWith, Fragment, on, withDesign
 } from '@bodiless/fclasses';
-import { withPrependChild } from '@bodiless/core';
-import { vitalRichText, RichTextClean } from '@bodiless/vital-editors';
 import { CardStatic, vitalCard } from '@bodiless/vital-card';
 import { HeroCenter } from '../../../components/Card';
 
