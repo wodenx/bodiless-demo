@@ -1,0 +1,33 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "More than just a site editor, BodilessJS includes advanced tooling for implementing and extending design systems.  "
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": ""
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "The bundled "
+      },
+      {
+        "text": "VitalDS",
+        "Bold": true
+      },
+      {
+        "text": " provides a  foundation set of layout and functional components, jump-starting your site-build while allowing you infinite customization to realize your individual vision."
+      }
+    ]
+  }
+]

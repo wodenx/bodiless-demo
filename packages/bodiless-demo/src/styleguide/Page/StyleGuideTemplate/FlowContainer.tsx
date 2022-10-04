@@ -1,7 +1,6 @@
 import React from 'react';
 import { withNodeKey } from '@bodiless/core';
 import {
-  flowHoc,
   as,
   replaceWith,
 } from '@bodiless/fclasses';
@@ -61,7 +60,9 @@ const Examples = (props: any) => (
 );
 
 export const FlowContainer = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
-  Meta: flowHoc.meta.term('Token')('FlowContainer'),
+  Meta: {
+    title: 'Styleguide: Flow Container',
+  },
   Content: {
     Title: replaceWith(() => <>FlowContainer</>),
     Examples: replaceWith(Examples),

@@ -15,7 +15,9 @@ const Variations = (props: any) => (
 );
 
 export const Images = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
-  Meta: flowHoc.meta.term('Token')('Images'),
+  Meta: {
+    title: 'Styleguide: Image',
+  },
   Content: {
     Title: replaceWith(() => <>Images</>),
     Examples: replaceWith(Variations),

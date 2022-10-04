@@ -1,0 +1,29 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "The tokens can be explored by clicking on  the component then choosing "
+      },
+      {
+        "text": "Tokens | Select",
+        "Bold": true
+      },
+      {
+        "text": " and checking/unchecking tokens."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "API Doc: "
+      },
+      {
+        "text": "TBD",
+        "Bold": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "uuid": "e98f9b90-3dd3-11ed-95ab-e1dd63cefdea",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "BurgerMenu"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { asStyleGuideTemplateToken, vitalStyleGuideTemplate } from '@bodiless/vital-templates';
-import { flowHoc, on, replaceWith } from '@bodiless/fclasses';
+import { on, replaceWith } from '@bodiless/fclasses';
 import { FooterClean, vitalFooter } from '@bodiless/vital-layout';
 
 // Apply similar method as done in the vitalLayout token.
@@ -14,7 +14,9 @@ const StickFooterLayout = asStyleGuideTemplateToken({
 });
 
 export const Footer = asStyleGuideTemplateToken(StickFooterLayout, {
-  Meta: flowHoc.meta.term('Token')('Footer'),
+  Meta: {
+    title: 'Styleguide: Footer',
+  },
   Content: {
     Title: replaceWith(() => <>Footer</>),
     Examples: on(FooterClean)(vitalFooter.Default),

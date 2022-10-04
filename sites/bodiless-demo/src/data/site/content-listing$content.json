@@ -99,6 +99,27 @@
       "type": "FilterableContent"
     },
     {
+      "uuid": "bc35c5a0-3dbc-11ed-96fb-93cd17632c56",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "FilterableContent"
+    },
+    {
+      "uuid": "df9d04f0-3de8-11ed-8467-d72380329c11",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "FilterableContent"
+    },
+    {
+      "uuid": "45228d40-3de9-11ed-bb29-a30fe8dd8055",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "FilterableContent"
+    },
+    {
       "uuid": "57424d00-bfed-11ec-a123-9fedd17f17d4",
       "wrapperProps": {
         "className": "w-full"

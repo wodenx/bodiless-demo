@@ -14,8 +14,10 @@ const Variations = (props: any) => (
   <DemoFlowContainer />
 );
 
-export const ContentListing = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
-  Meta: flowHoc.meta.term('Token')('Content Listing'),
+export const ContentListingStyleGuide = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
+  Meta: {
+    title: 'Styleguide: Content Listing',
+  },
   Content: {
     Title: replaceWith(() => <>Content Listing</>),
     Examples: replaceWith(Variations),
