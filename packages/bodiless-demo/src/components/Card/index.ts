@@ -84,6 +84,7 @@ const asVideoCard = asCardToken(
 const asVideoVerticalCard = asCardToken(
   VideoCardDefault,
   vitalCard.WithVerticalOrientation,
+  vitalCard.WithNoEyebrow,
   vitalCard.WithNoTitle,
 );
 
