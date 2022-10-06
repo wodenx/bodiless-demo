@@ -3,6 +3,7 @@ import {
 } from '@bodiless/fclasses';
 import { asCardToken, vitalCardStatic, vitalCard } from '@bodiless/vital-card';
 import { vitalTypography } from '@bodiless/vital-elements';
+import { vitalRichText, RichTextClean } from '@bodiless/vital-editors';
 import { VideoClean, VideoTokens } from '../Video';
 
 const asGetStarted = asCardToken(
@@ -31,6 +32,38 @@ const asGetStarted = asCardToken(
       flowHoc.meta.term('Orientation')('Horizontal'),
     ),
   }
+);
+
+const asArticle = asCardToken(
+  {
+    ...vitalCard.Base,
+    Components: {
+      ...vitalCard.Base.Components,
+      Wrapper: replaceWith(Div),
+      CTAWrapper: replaceWith(() => null),
+      Description: on(RichTextClean)(vitalRichText.Default),
+    },
+    Layout: {
+      ImageWrapper: 'float-left full md:w-1/3 pr-4 pb-4',
+    },
+    Theme: {
+      TitleWrapper: vitalTypography.H1,
+      Description: vitalTypography.Body,
+    },
+    Spacing: {
+      Wrapper: 'py-8',
+    },
+    Meta: extendMeta(
+      flowHoc.meta.term('Type')('Card'),
+      flowHoc.meta.term('Sub Type')('Article'),
+      flowHoc.meta.term('Orientation')('Horizontal'),
+    ),
+    Editors: {
+      ...vitalCard.Base.Editors,
+      Wrapper: undefined,
+    },
+  },
+  vitalCardStatic.WithNoEyebrow,
 );
 
 const HeroCenter = asCardToken({
@@ -73,4 +106,5 @@ export {
   asGetStarted,
   HeroCenter,
   asVideoCard,
+  asArticle,
 };

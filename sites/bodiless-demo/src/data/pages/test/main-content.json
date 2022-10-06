@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "uuid": "dc80d360-4594-11ed-be84-0ffb385b4ce0",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "ArticleCard"
+    }
+  ]
+}
