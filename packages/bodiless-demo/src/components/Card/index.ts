@@ -81,6 +81,11 @@ const asVideoCard = asCardToken(
   vitalCard.WithHorizontalContentCentered,
   vitalCard.WithNoEyebrow,
 );
+const asVideoVerticalCard = asCardToken(
+  VideoCardDefault,
+  vitalCard.WithVerticalOrientation,
+  vitalCard.WithNoEyebrow,
+);
 
 export {
   asGetStarted,
@@ -88,4 +93,5 @@ export {
   withGradientBackground,
   HeroCenter,
   asVideoCard,
+  asVideoVerticalCard,
 };
