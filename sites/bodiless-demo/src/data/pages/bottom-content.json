@@ -29,13 +29,6 @@
       "type": "StyledEditorBorder"
     },
     {
-      "uuid": "822f8970-457f-11ed-be10-61d03f171cd4",
-      "wrapperProps": {
-        "className": "w-full"
-      },
-      "type": "VideoVerticalCard"
-    },
-    {
       "uuid": "dedffb00-dad6-11ec-b70a-a1c4c7d90965",
       "wrapperProps": {
         "className": "w-full"
