@@ -18,6 +18,7 @@ const Hero = asCardToken(
   vitalCardBase.WithPrimaryButton,
 );
 
+
 export default {
   ...vitalCardBase,
   Hero,

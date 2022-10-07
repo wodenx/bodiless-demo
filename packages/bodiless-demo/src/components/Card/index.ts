@@ -1,9 +1,10 @@
 import {
-  Div, flowHoc, on, replaceWith, H2, extendMeta,
+  Div, flowHoc, on, replaceWith, H2, extendMeta, as,
 } from '@bodiless/fclasses';
 import { asCardToken, vitalCardStatic, vitalCard } from '@bodiless/vital-card';
 import { vitalTypography } from '@bodiless/vital-elements';
 import { VideoClean, VideoTokens } from '../Video';
+import { withNode, withNodeKey } from '@bodiless/core';
 
 const asGetStarted = asCardToken(
   vitalCardStatic.Default,
@@ -69,8 +70,31 @@ const asVideoCard = asCardToken(
   vitalCard.WithNoEyebrow,
 );
 
+const WithCenteredTitle = asCardToken({
+  Core: {
+    TitleWrapper: 'text-center',
+  }
+});
+
+const CaptionedImage = asCardToken(
+  vitalCard.Base,
+  vitalCard.WithNoDescription,
+  vitalCard.WithNoEyebrow,
+  WithCenteredTitle,
+  {
+    Meta: flowHoc.meta.term('Sub Type')('Captioned Image'),
+  },
+  {
+    Schema: {
+      Image: as(withNode, withNodeKey('image'))
+    }
+  },
+);
+
 export {
   asGetStarted,
   HeroCenter,
   asVideoCard,
+  WithCenteredTitle,
+  CaptionedImage,
 };
