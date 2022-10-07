@@ -1,0 +1,33 @@
+[
+  {
+    "type": "H1",
+    "children": [
+      {
+        "text": "The Bodiless Editor"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Is "
+      },
+      {
+        "text": "really",
+        "Bold": true
+      },
+      {
+        "text": " cool."
+      }
+    ]
+  },
+  {
+    "type": "H2",
+    "children": [
+      {
+        "text": "Here's Why"
+      }
+    ]
+  }
+]
