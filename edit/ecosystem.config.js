@@ -21,7 +21,14 @@ module.exports = {
     {
       name: 'backend',
       cwd: `${appVolume()}/root/sites/${siteDirName()}`,
-      script: backend(),
+      script: 'npm',
+      args: 'dev-backend',
+    },
+    {
+      name: 'watch-package',
+      cwd: `${appVolume()}/root/packages/${siteDirName()}`,
+      script: 'npm',
+      args: 'build:watch',
     },
   ],
 };
