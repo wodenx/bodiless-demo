@@ -15,20 +15,20 @@ module.exports = {
     {
       name: 'frontend',
       cwd: `${appVolume()}/root/sites/${siteDirName()}`,
-      script: `${appVolume()}/root/node_modules/.bin/gatsby`,
-      args: `develop --port ${gatsbyPort()}`,
+      script: 'npm',
+      args: `run dev-frontend -- --port ${gatsbyPort()}`,
     },
     {
       name: 'backend',
       cwd: `${appVolume()}/root/sites/${siteDirName()}`,
       script: 'npm',
-      args: 'dev-backend',
+      args: 'run dev-backend',
     },
     {
       name: 'watch-package',
       cwd: `${appVolume()}/root/packages/${siteDirName()}`,
       script: 'npm',
-      args: 'build:watch',
+      args: 'run build:watch',
     },
   ],
 };
