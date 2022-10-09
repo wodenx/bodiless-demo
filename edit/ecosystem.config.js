@@ -25,7 +25,7 @@ module.exports = {
       args: 'run dev-backend',
     },
     {
-      name: 'watch-package',
+      name: 'package',
       cwd: `${appVolume()}/root/packages/${siteDirName()}`,
       script: 'npm',
       args: 'run build:watch',

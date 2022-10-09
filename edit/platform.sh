@@ -301,7 +301,7 @@ _setup_deploy () {
 
   # wait 2 seconds to work around pm2 daemon issue.
   sleep 2
-  pm2 stop frontend && pm2 stop backend || true
+  pm2 stop frontend && pm2 stop backend && pm2 stop package || true
 }
 
 # Default implementation of psh deploy hook (fresh clone and prepare npm)
@@ -319,7 +319,7 @@ default_finalize_deploy () {
 
 # Final step after p.sh deploy hook.
 _teardown_deploy () {
-  pm2 restart backend && pm2 restart frontend || pm2 start ${PLATFORM_APP_DIR}/ecosystem.config.js
+  pm2 restart package && pm2 restrt backend && pm2 restart frontend || pm2 start ${PLATFORM_APP_DIR}/ecosystem.config.js
 }
 
 # _setup/_teardown are not hooks; they implement internal logic we never want overridden.
