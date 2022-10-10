@@ -11,7 +11,7 @@ const Default = asFooterToken({
     FooterMenu: vitalMenu.Footer,
     Column1Wrapper: replaceWith(Div),
     RewardsWrapper: replaceWith(Div),
-    // Rewards: replaceWith(GitButtons),
+    Rewards: replaceWith(GitButtons),
     CopyrightRow: replaceWith(() => null),
     CopyrightRowOutsideColumns: on(CopyrightRowClean)(
       vitalCopyrightRow.CopyrightNoSocialLinks,
