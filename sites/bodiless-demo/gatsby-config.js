@@ -26,6 +26,14 @@ const disabledPages = Object.keys(disablePageList).filter(
 // Gatsby plugins list.
 const plugins = [
   {
+    resolve: 'gatsby-source-drupal',
+    options: {
+      baseUrl: 'https://main-bvxea6i-kvlqv2lq6ljra.ca-1.platformsh.site',
+      // apiBase: `api`, // optional, defaults to `jsonapi`
+    },
+  },
+  // 'gatsby-transformer-remote-filesystem',
+  {
     resolve: 'gatsby-plugin-compile-es6-packages',
     options: {
       modules: ['@bodiless/gatsby-theme-bodiless'],

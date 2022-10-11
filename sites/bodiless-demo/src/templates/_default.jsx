@@ -1,9 +1,10 @@
 import { Fragment } from 'react';
 import { graphql } from 'gatsby';
-import { as } from '@bodiless/fclasses';
-import { vitalPage } from '@bodiless/vital-templates';
+import { DefaultPage } from '../components';
+// import { as } from '@bodiless/fclasses';
+// import { vitalPage } from '@bodiless/vital-templates';
 
-const DefaultPage = as(vitalPage.Default)(Fragment);
+// const DefaultPage = as(vitalPage.Default)(Fragment);
 
 export default DefaultPage;
 
