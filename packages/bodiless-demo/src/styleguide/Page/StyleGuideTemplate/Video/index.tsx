@@ -15,7 +15,9 @@ const Variations = (props: any) => (
 );
 
 export const Video = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
-  Meta: flowHoc.meta.term('Token')('Video'),
+  Meta: {
+    title: 'Styleguide: Video',
+  },
   Content: {
     Title: replaceWith(() => <>Video</>),
     Examples: replaceWith(Variations),

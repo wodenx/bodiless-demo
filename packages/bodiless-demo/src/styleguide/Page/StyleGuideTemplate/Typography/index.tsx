@@ -15,7 +15,9 @@ const Variations = (props: any) => (
 );
 
 export const Typography = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
-  Meta: flowHoc.meta.term('Token')('Typography'),
+  Meta: {
+    title: 'Styleguide: Typography',
+  },
   Content: {
     Title: replaceWith(() => <>Typography</>),
     Examples: replaceWith(Variations),

@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "uuid": "1910b9f0-3dcd-11ed-8c46-a9b4b8ebe84b",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "Breadcrumb"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+version: 2
+snapshot:
+  widths: [640, 1440]
+static:
+  base-url: /
+  clean-urls: false
+  include: [
+    '**/*.html',
+  ]
+  exclude: []
+  rewrites: {}
+  overrides: []  

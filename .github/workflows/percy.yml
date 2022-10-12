@@ -1,0 +1,39 @@
+# Will checkout code base, run setup & build and ask Percy to snapshot site for visual comparison
+
+name: CI
+
+# Controls when the workflow will run any PR with [snapshot] in PR title
+on:
+  pull_request:
+    branches:
+      - '**'
+  push:
+    branches:
+      - main
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  percy-snapshot:
+    # The type of runner that the job will if PR contains [snapshot]
+    if: ${{ github.ref == 'refs/heads/main' || contains(github.event.pull_request.title, '[snapshot]') }}
+    runs-on: ubuntu-latest
+    environment: Test
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js v16.13
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.13        
+      - name: Setup
+        run: npm run setup
+      - name: Build
+        run: npm run build
+      - name: Percy Test
+        run: npx percy snapshot ./sites/bodiless-demo/public
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

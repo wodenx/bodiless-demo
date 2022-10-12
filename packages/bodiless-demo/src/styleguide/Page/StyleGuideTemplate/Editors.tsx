@@ -5,7 +5,7 @@ import {
 } from '@bodiless/vital-editors';
 import { asStyleGuideTemplateToken, vitalStyleGuideTemplate } from '@bodiless/vital-templates';
 import {
-  as, flowHoc, replaceWith,
+  as, replaceWith,
   H3, Section, Pre, Div,
 } from '@bodiless/fclasses';
 import { vitalColor, vitalTypography } from '@bodiless/vital-elements';
@@ -71,7 +71,9 @@ const Examples = () => (
 );
 
 export const Editors = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
-  Meta: flowHoc.meta.term('Token')('Editors'),
+  Meta: {
+    title: 'Styleguide: Editors',
+  },
   Content: {
     Title: replaceWith(() => <>Text Editors</>),
     Examples: replaceWith(Examples),
@@ -91,7 +93,9 @@ const ExamplesMonoFont = () => (
 );
 
 export const EditorsMonoFont = asStyleGuideTemplateToken(vitalStyleGuideTemplate.Default, {
-  Meta: flowHoc.meta.term('Token')('Editors'),
+  Meta: {
+    title: 'Styleguide: Editors with MonoFont',
+  },
   Content: {
     Title: replaceWith(() => <>Text Editors</>),
     Examples: replaceWith(ExamplesMonoFont),
