@@ -19,6 +19,7 @@
     "@bodiless/documentation": "^v1.0.0-rc.16",
     "@bodiless/fclasses": "^v1.0.0-rc.16",
     "@bodiless/gatsby-theme-bodiless": "^v1.0.0-rc.16",
+    "@bodiless/richtext": "^v1.0.0-rc.16",
     "@bodiless/search": "^v1.0.0-rc.16",
     "@bodiless/ui": "^v1.0.0-rc.16",
     "@bodiless/vital-editors": "^v1.0.0-rc.16",
