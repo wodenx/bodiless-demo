@@ -8,9 +8,9 @@
       "type": "DrupalArticle"
     },
     {
-      "uuid": "fba6dae0-49c3-11ed-b9f0-2944261a77c1",
+      "uuid": "91b6d8d0-4a4d-11ed-a45c-7b6fb71762f7",
       "wrapperProps": {
-        "className": "w-full"
+        "className": "w-full lg:w-2/3"
       },
       "type": "ArticleFeature"
     }
