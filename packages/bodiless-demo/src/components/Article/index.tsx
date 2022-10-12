@@ -6,10 +6,10 @@ import {
 import { vitalEditorPlain, EditorPlainClean } from '@bodiless/vital-editors';
 import { vitalTypography } from '@bodiless/vital-elements';
 // import { NodeTreePrinter } from '../NodeTreePrinter';
+import { withNodeKey } from '@bodiless/core';
 import { ARTICLE_LIBRARY_NODEKEY } from './data/withContentLibrary';
 import type { ArticleMetadata } from './data/withContentLibrary';
 import withDrupalArticleLibrary from './data/withDrupalArticleLibrary';
-import { withNodeKey } from '@bodiless/core';
 
 const Feature = asCardToken(
   {

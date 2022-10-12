@@ -116,7 +116,6 @@ const parseArticleBody = (item: DrupalArticleDataItem) => {
 
 const useDrupalArticleData = (prefix?: string) => () => {
   const rawData: DrupalArticleData = useStaticQuery(query);
-  console.log('rawData', rawData);
   const fullPrefix = prefix ? `${prefix}$` : '';
   const data = rawData.allNodeArticle.edges.reduce(
     (data, next, index) => ({
@@ -127,7 +126,6 @@ const useDrupalArticleData = (prefix?: string) => () => {
       [`${fullPrefix}${next.node.id}$body`]: parseArticleBody(next),
     }), {}
   );
-  console.log('data', data);
   return data;
 };
 

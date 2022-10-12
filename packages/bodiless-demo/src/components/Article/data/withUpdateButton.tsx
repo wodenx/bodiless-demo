@@ -4,12 +4,12 @@ import {
 } from '@bodiless/core';
 import { v4 } from 'uuid';
 import type { HOC } from '@bodiless/fclasses';
-import { ArticleMetadata, isLinked, useIsLinked } from './withContentLibrary';
-import withUpdateButtonBase from './withUpdateButtonBase';
 import {
+  ArticleMetadata, useIsLinked,
   useLibraryNode as useLibraryNodeBase,
   useOverrides as useOverridesBase,
 } from './withContentLibrary';
+import withUpdateButtonBase from './withUpdateButtonBase';
 
 const useLibraryNode = () => {
   const { node: targetNode } = useNode<any>();
@@ -74,17 +74,14 @@ const useFormOptions = () => {
   };
 };
 
-const useOverrides = () => {
-  const { targetNode } = useNodes();
-  return {
-    ...useOverridesBase(),
-    name: 'cms-update',
-    isActive: true,
-    isHidden: !useIsLinked(),
-    formDescription: `This component is linked to an article from the CMS.
+const useOverrides = () => ({
+  ...useOverridesBase(),
+  name: 'cms-update',
+  isActive: true,
+  isHidden: !useIsLinked(),
+  formDescription: `This component is linked to an article from the CMS.
                       If there is a later revision, you may update the content here.`,
-  };
-};
+});
 
 const options = {
   useOverrides,
