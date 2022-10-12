@@ -5,17 +5,17 @@ import {
 } from '@bodiless/fclasses';
 import { withPrependChild } from '@bodiless/core';
 import { vitalRichText, RichTextClean } from '@bodiless/vital-editors';
-import { ArticleClean } from '../../../components/Article';
-import withDrupalArticleLibrary from '../../../components/Article/data/withDrupalArticleLibrary';
+// import { ArticleClean } from '../../../components/Article';
+// import withDrupalArticleLibrary from '../../../components/Article/data/withDrupalArticleLibrary';
 
-const DrupalArticle = asGenericTemplateToken(
-  vitalGenericTemplateBase.Base,
-  {
-    Components: {
-      TopContent: replaceWith(withDrupalArticleLibrary(ArticleClean)),
-    },
-  },
-);
+// const DrupalArticle = asGenericTemplateToken(
+//   vitalGenericTemplateBase.Base,
+//   {
+//     Components: {
+//       TopContent: replaceWith(withDrupalArticleLibrary(ArticleClean)),
+//     },
+//   },
+// );
 
 const NoTopContent = asGenericTemplateToken(
   vitalGenericTemplateBase.Base,
@@ -61,5 +61,5 @@ export default {
 
 export {
   NoTopContent,
-  DrupalArticle,
+  // DrupalArticle,
 };

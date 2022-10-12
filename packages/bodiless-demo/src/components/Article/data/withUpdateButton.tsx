@@ -4,7 +4,7 @@ import {
 } from '@bodiless/core';
 import { v4 } from 'uuid';
 import type { HOC } from '@bodiless/fclasses';
-import type { ArticleMetadata } from './withContentLibrary';
+import { ArticleMetadata, isLinked, useIsLinked } from './withContentLibrary';
 import withUpdateButtonBase from './withUpdateButtonBase';
 import {
   useLibraryNode as useLibraryNodeBase,
@@ -78,10 +78,11 @@ const useOverrides = () => {
   const { targetNode } = useNodes();
   return {
     ...useOverridesBase(),
-    icon: 'account_balance',
+    name: 'cms-update',
     isActive: true,
-    isHidden: !targetNode.data.revisionId,
-    formDescription: undefined,
+    isHidden: !useIsLinked(),
+    formDescription: `This component is linked to an article from the CMS.
+                      If there is a later revision, you may update the content here.`,
   };
 };
 

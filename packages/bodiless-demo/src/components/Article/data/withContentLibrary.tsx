@@ -22,17 +22,20 @@ export const useLibraryNode = () => {
 // We display nothing bc the title says it all
 const ArticleDisplay = () => <></>;
 
+export const useIsLinked = (): Boolean => {
+  const { node } = useNode<ArticleMetadata>();
+  return !!node.data.revisionId;
+}
+
 export const useOverrides = () => ({
   name: 'cms-library',
   label: 'Articles',
-  groupLabel: 'CMS',
-  groupMerge: false,
-  icon: 'account_balance',
-  isHidden: false,
-  // global: true,
-  // local: false,
-  // label: 'Drupal',
-  // isHidden: !!node.data.revisionId,
+  groupLabel: 'Content',
+  groupMerge: 'none' as 'none',
+  icon: 'web_stories',
+  isHidden: useIsLinked(),
+  formTitle: 'CMS Articles',
+  formDescription: 'This is a list of articles available in the CMS.  Select one to link its content to this component.',
 });
 
 const useMeta = (node: ContentNode<any>) => {

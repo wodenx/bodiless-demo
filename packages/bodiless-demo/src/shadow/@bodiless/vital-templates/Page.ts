@@ -8,7 +8,7 @@ const Default = asFluidToken(
   {
     Components: {
       NoTopContent: on(GenericTemplateClean)(NoTopContent),
-      DrupalArticle: on(GenericTemplateClean)(DrupalArticle),
+      // DrupalArticle: on(GenericTemplateClean)(DrupalArticle),
     },
   }
 );

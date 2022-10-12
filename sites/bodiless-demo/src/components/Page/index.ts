@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-import { as, asTokenSpec } from '@bodiless/fclasses';
-import { vitalPage, asBodilessPage } from '@bodiless/vital-templates';
+import { as } from '@bodiless/fclasses';
+import { vitalPage } from '@bodiless/vital-templates';
 import { asFluidToken } from '@bodiless/vital-elements';
 import { withDrupalArticleData } from './withDrupalArticleData';
 

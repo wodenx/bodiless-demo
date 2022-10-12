@@ -102,7 +102,7 @@ const parseArticleFieldImage = (item: DrupalArticleDataItem) => {
 const parseArticleBody = (item: DrupalArticleDataItem) => {
   const drupalNode = item.node;
   return {
-    source: drupalNode.body.value,
+    text: drupalNode.body.value,
   };
 };
 
