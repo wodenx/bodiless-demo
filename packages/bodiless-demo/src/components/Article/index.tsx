@@ -3,7 +3,7 @@ import { replaceWith } from '@bodiless/fclasses/lib/replaceable';
 import {
   Div, flowHoc, extendMeta, on
 } from '@bodiless/fclasses';
-import { vitalEditorPlain, EditorPlainClean } from '@bodiless/vital-editors';
+import { vitalEditorPlain, EditorPlainClean, vitalRichText, RichTextClean } from '@bodiless/vital-editors';
 import { vitalTypography } from '@bodiless/vital-elements';
 // import { NodeTreePrinter } from '../NodeTreePrinter';
 import { withNodeKey } from '@bodiless/core';
@@ -41,7 +41,7 @@ const Feature = asCardToken(
     Editors: {
       ...vitalCard.Base.Editors,
       Wrapper: undefined,
-      Description: on(EditorPlainClean)(vitalEditorPlain.Default),
+      Description: on(RichTextClean)(vitalRichText.Default),
     },
   },
   vitalCard.WithNoEyebrow,

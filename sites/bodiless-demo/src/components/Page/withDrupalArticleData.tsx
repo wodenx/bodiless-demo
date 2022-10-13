@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { withDefaultContent } from '@bodiless/core';
 import type { ArticleMetadata } from 'bodiless-demo';
 import { ARTICLE_LIBRARY_NODEKEY } from 'bodiless-demo';
+import { deserializeBody } from './deserializeRichText';
 
 // NOTE: This query and related translations are defined at site level bc
 // Gatsby will not, by default, extract queries from
@@ -17,6 +18,7 @@ const query = graphql`
           body {
             summary
             value
+            processed
           }
           drupal_internal__vid
           drupal_internal__nid
@@ -51,6 +53,7 @@ type DrupalArticleDataItem = {
     body: {
       summary: string,
       value: string,
+      processed: html,
     },
     title: string,
     field_image: {
@@ -101,9 +104,15 @@ const parseArticleFieldImage = (item: DrupalArticleDataItem) => {
 
 const parseArticleBody = (item: DrupalArticleDataItem) => {
   const drupalNode = item.node;
-  return {
-    text: drupalNode.body.value,
-  };
+  const body = drupalNode.body.processed;
+  console.log('raw body',body);
+  const deserialized = deserializeBody(body);
+  console.log('deserialgized body', deserialized);
+  return deserialized;
+  // return {
+  //   text: drupalNode.body.value,
+  // };
+  return 
 };
 
 // const useArticleData = (prefix = '') => (props: any) => ({

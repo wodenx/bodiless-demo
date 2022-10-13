@@ -7,7 +7,7 @@ const withRefreshContentOnLoad: HOC = Component => props => {
     try {
       const refresh = new XMLHttpRequest();
       refresh.onreadystatechange = rsp => console.log('respose', rsp);
-      refresh.open('POST',`http://localhost:${port}/___refresh`);
+      refresh.open('POST',`http://localhost:${port}/__refresh`);
       refresh.send();
     } catch (e) {
       console.log('error', e);
