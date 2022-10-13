@@ -6,13 +6,6 @@
         "className": "w-full"
       },
       "type": "DrupalArticle"
-    },
-    {
-      "uuid": "91b6d8d0-4a4d-11ed-a45c-7b6fb71762f7",
-      "wrapperProps": {
-        "className": "w-full lg:w-2/3"
-      },
-      "type": "ArticleFeature"
     }
   ]
 }

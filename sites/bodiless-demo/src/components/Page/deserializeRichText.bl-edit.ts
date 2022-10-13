@@ -1,7 +1,8 @@
 import {
-  deserializeHtml, createDefaultDeserializers, createLinkDeserializer, TagName, createDeserializer,
+  deserializeHtml, createLinkDeserializer, TagName, createDeserializer,
 } from '@bodiless/richtext';
 import { DefaultNormalHref } from '@bodiless/components';
+// import { DOMParser } from 'xmldom';
 
 const createStrongDeserializer = () => ({
   ...createDeserializer({
@@ -45,6 +46,9 @@ export const deserializeBody = (html: string) => deserializeHtml(
     }),
     H2: createHeader2Deserializer(),
     H3: createHeader3Deserializer(),
-  }
+  },
+  // @todo This seems not to be 100% compatible with browser DOMParser (no 'body' attribute)
+  // Currently we don't need to parse HTML during build, only in edit env, but this
+  // will need to be revisited
+  // new DOMParser(),
 );
-
