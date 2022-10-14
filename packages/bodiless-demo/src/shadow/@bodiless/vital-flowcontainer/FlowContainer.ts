@@ -26,6 +26,7 @@ const Default = asFluidToken(
       SecondHighlightedTable: on(TitleTableClean)(asSecondColumnHighlightedTitle),
       ThirdHighlightedTable: on(TitleTableClean)(asThirdColumnHighlightedTitle),
       ArticleFeature: on(CardClean)(demoArticle.Feature),
+      ArticleFeatureRight: on(CardClean)(demoArticle.FeatureRight),
       Video: on(VideoClean)(VideoTokens.Default),
     },
   },

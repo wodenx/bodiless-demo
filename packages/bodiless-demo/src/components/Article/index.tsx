@@ -47,6 +47,24 @@ const Feature = asCardToken(
   vitalCard.WithNoEyebrow,
 );
 
-const demoArticle = { Feature };
+const FeatureRight = asCardToken({
+  ...Feature,
+  Layout: {
+    ...Feature.Layout,
+    ImageWrapper: 'float-right full md:w-1/3 pl-4 pb-4',
+  },
+});
+
+// const Promo = asCardToken({
+//   ...vitalCard.Default,
+//   Schema: {
+//       ...vitalCard.Default.Schema,
+//       _: withDrupalArticleLibrary,
+//       Description: withNodeKey('summary'),
+//     },
+//
+//   }
+
+const demoArticle = { Feature, FeatureRight };
 
 export { demoArticle, ArticleMetadata, ARTICLE_LIBRARY_NODEKEY };

@@ -84,6 +84,7 @@ const parseArticleMetadata = (item: DrupalArticleDataItem): ArticleMetadata => {
     id: drupalNode.id,
     revisionId: drupalNode.drupal_internal__vid,
     updateTime: drupalNode.changed,
+    editLink: `https://main-bvxea6i-kvlqv2lq6ljra.ca-1.platformsh.site/node/${drupalNode.drupal_internal__nid}/edit`,
   };
 };
 

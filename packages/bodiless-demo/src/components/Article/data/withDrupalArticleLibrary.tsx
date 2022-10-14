@@ -4,6 +4,7 @@ import { flowHoc } from '@bodiless/fclasses';
 import { withLocalContextMenu, withContextActivator, withActivatorWrapper } from '@bodiless/core';
 import withContentLibrary from './withContentLibrary';
 import withUpdateButton, { withUpdateNotifier } from './withUpdateButton';
+import withEditInCMS from './withEditInCMS';
 
 // const withContextLoggerr: HOC = Component => props => {
 //   const c = useEditContext();
@@ -18,6 +19,7 @@ const withDrupalArticleLibrary = flowHoc(
   withLocalContextMenu,
   withContextActivator('onClick'),
   withUpdateNotifier,
+  withEditInCMS,
   withUpdateButton,
   withContentLibrary,
   // withNode,

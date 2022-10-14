@@ -8,6 +8,7 @@ export type ArticleMetadata = {
   id: string,
   revisionId: string,
   updateTime: string,
+  editLink: string,
 };
 
 export const ARTICLE_LIBRARY_NODEKEY = '___drupal';
@@ -28,7 +29,7 @@ export const useIsLinked = (): boolean => {
 
 export const useOverrides = () => ({
   name: 'cms-library',
-  label: 'Articles',
+  label: 'Select',
   groupLabel: 'Content',
   groupMerge: 'none' as 'none',
   icon: 'web_stories',

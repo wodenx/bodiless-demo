@@ -37,6 +37,7 @@ const useFormOptions = () => {
       id: '',
       revisionId: '',
       updateTime: '',
+      editLink: '',
     });
   };
 
@@ -65,6 +66,7 @@ const useFormOptions = () => {
         <br />
         <br />
         <ComponentFormUnwrapButton onClick={unLink}>Unlink</ComponentFormUnwrapButton>
+        <ComponentFormUnwrapButton onClick={unLink}>Unlink</ComponentFormUnwrapButton>
       </>
     );
   };
@@ -77,7 +79,8 @@ const useFormOptions = () => {
 const useOverrides = () => ({
   ...useOverridesBase(),
   name: 'cms-update',
-  isActive: true,
+  label: 'Update',
+  isActive: useIsNewVersionAvailable(),
   isHidden: !useIsLinked(),
   formDescription: `This component is linked to an article from the CMS.
                       If there is a later revision, you may update the content here.`,
