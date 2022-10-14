@@ -36,7 +36,7 @@ const Feature = asCardToken(
     },
     Meta: extendMeta(
       flowHoc.meta.term('Type')('Article'),
-      flowHoc.meta.term('Sub Type')('Feature Right'),
+      flowHoc.meta.term('Sub Type')('Feature'),
     ),
     Editors: {
       ...vitalCard.Base.Editors,
@@ -53,6 +53,10 @@ const FeatureRight = asCardToken({
     ...Feature.Layout,
     ImageWrapper: 'float-right full md:w-1/3 pl-4 pb-4',
   },
+    Meta: extendMeta(
+      flowHoc.meta.term('Type')('Article'),
+      flowHoc.meta.term('Sub Type')('Feature Right'),
+    ),
 });
 
 const Promo = asCardToken({

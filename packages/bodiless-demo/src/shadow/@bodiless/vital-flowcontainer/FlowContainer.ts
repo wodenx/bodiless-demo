@@ -19,8 +19,9 @@ const ContentRegion = asFluidToken({
   Components: {
     ...vitalFlowContainerBase.ContentRegion.Components,
     ArticlePromo: on(CardClean)(demoArticle.Promo),
+    GetStarted: on(CardStatic)(asGetStarted),
   },
-});
+}, vitalFlowContainerBase.WithContentLibrary);
 
 const Default = asFluidToken(
   {
