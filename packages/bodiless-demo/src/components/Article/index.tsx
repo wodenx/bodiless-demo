@@ -36,7 +36,7 @@ const Feature = asCardToken(
     },
     Meta: extendMeta(
       flowHoc.meta.term('Type')('Article'),
-      flowHoc.meta.term('Sub Type')('Feature'),
+      flowHoc.meta.term('Sub Type')('Feature Right'),
     ),
     Editors: {
       ...vitalCard.Base.Editors,
@@ -55,16 +55,18 @@ const FeatureRight = asCardToken({
   },
 });
 
-// const Promo = asCardToken({
-//   ...vitalCard.Default,
-//   Schema: {
-//       ...vitalCard.Default.Schema,
-//       _: withDrupalArticleLibrary,
-//       Description: withNodeKey('summary'),
-//     },
-//
-//   }
+const Promo = asCardToken({
+  ...vitalCard.Default,
+  Schema: {
+    ...vitalCard.Default.Schema,
+    _: withDrupalArticleLibrary,
+  },
+  Meta: extendMeta(
+    flowHoc.meta.term('Type')('Article'),
+    flowHoc.meta.term('Sub Type')('Promo'),
+  ),
+}, vitalCard.WithNoEyebrow);
 
-const demoArticle = { Feature, FeatureRight };
+const demoArticle = { Feature, FeatureRight, Promo };
 
 export { demoArticle, ArticleMetadata, ARTICLE_LIBRARY_NODEKEY };

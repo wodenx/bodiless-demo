@@ -95,6 +95,13 @@ const parseArticleTitle = (item: DrupalArticleDataItem) => {
   };
 };
 
+const parseArticleSummary = (item: DrupalArticleDataItem) => {
+  const drupalNode = item.node;
+  return {
+    text: drupalNode.body.summary,
+  };
+};
+
 const parseArticleFieldImage = (item: DrupalArticleDataItem) => {
   const drupalNode = item.node;
   return {
@@ -138,6 +145,7 @@ const useDrupalArticleData = (prefix?: string) => () => {
       [`${fullPrefix}${next.node.id}$title`]: parseArticleTitle(next),
       [`${fullPrefix}${next.node.id}$image`]: parseArticleFieldImage(next),
       [`${fullPrefix}${next.node.id}$body`]: parseArticleBody(next),
+      [`${fullPrefix}${next.node.id}$description`]: parseArticleSummary(next),
     }), {}
   );
   return data;
