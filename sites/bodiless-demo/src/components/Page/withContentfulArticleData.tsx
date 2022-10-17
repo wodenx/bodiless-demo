@@ -10,110 +10,102 @@ import { deserializeBody } from './deserializeRichText.bl-edit';
 // specially named packages (packages with gatsby in the name).
 // @see https://github.com/gatsbyjs/gatsby/issues/12569
 const query = graphql`
-  query MyQuery {
-    allNodeArticle {
-      edges {
-        node {
-          id
-          body {
-            summary
-            value
-            processed
+query ContentfulQuery {
+  allContentfulArticle {
+    edges {
+      node {
+        body {
+          raw
+        }
+        title
+        summary {
+          summary
+        }
+        id
+        updatedAt
+        contentful_id
+        sys {
+          revision
+        }
+        image {
+          file {
+            url
           }
-          drupal_internal__vid
-          drupal_internal__nid
-          changed
           title
-          relationships {
-            field_image {
-              localFile {
-                publicURL
-              }
-            }
-          }
-          field_image {
-            alt
-            title
-            width
-            height
-            drupal_internal__target_id
-          }
         }
       }
     }
   }
+}
 `;
 
-type DrupalArticleDataItem = {
+type ContentfulArticleDataItem = {
   node: {
     id: string,
-    drupal_internal__nid: string,
-    drupal_internal__vid: string,
-    changed: string,
+    contentful_id: string,
+    sys: {
+      revision: string,
+    },
+    updatedAt: string,
     body: {
-      summary: string,
-      value: string,
-      processed: string,
+      raw: any,
     },
     title: string,
-    field_image: {
-      alt: string,
-      title: string,
-      width: number,
-      height: number,
-    },
-    relationships: {
-      field_image: {
-        localFile: {
-          publicURL: string,
-        },
+    summary: {
+      summary: string,
+    }
+    image: {
+      file: {
+        url: string,
       },
+      title: string,
     },
   }
 };
 
-type DrupalArticleData = {
-  allNodeArticle: {
-    edges: DrupalArticleDataItem[],
+type ContentfulArticleData = {
+  allContentfulArticle: {
+    edges: ContentfulArticleDataItem[],
   }
 };
 
-const parseArticleMetadata = (item: DrupalArticleDataItem): ArticleMetadata => {
-  const drupalNode = item.node;
+const parseArticleMetadata = (item: ContentfulArticleDataItem): ArticleMetadata => {
+  const contentfulNode = item.node;
   return {
-    id: drupalNode.id,
-    revisionId: drupalNode.drupal_internal__vid,
-    updateTime: drupalNode.changed,
-    editLink: `https://main-bvxea6i-kvlqv2lq6ljra.ca-1.platformsh.site/node/${drupalNode.drupal_internal__nid}/edit`,
+    id: contentfulNode.id,
+    revisionId: contentfulNode.sys.revision,
+    updateTime: contentfulNode.updatedAt,
+    editLink: `https://app.contentful.com/spaces/9jfq70qfast7/entries/${contentfulNode.contentful_id}`,
   };
 };
 
-const parseArticleTitle = (item: DrupalArticleDataItem) => {
-  const drupalNode = item.node;
+const parseArticleTitle = (item: ContentfulArticleDataItem) => {
+  const contentfulNode = item.node;
   return {
-    text: drupalNode.title,
+    text: contentfulNode.title,
   };
 };
 
-const parseArticleSummary = (item: DrupalArticleDataItem) => {
-  const drupalNode = item.node;
+const parseArticleSummary = (item: ContentfulArticleDataItem) => {
+  const contentfulNode = item.node;
   return {
-    text: drupalNode.body.summary,
+    text: contentfulNode.summary.summary,
   };
 };
 
-const parseArticleFieldImage = (item: DrupalArticleDataItem) => {
-  const drupalNode = item.node;
+const parseArticleFieldImage = (item: ContentfulArticleDataItem) => {
+  const contentfulNode = item.node;
   return {
-    src: drupalNode.relationships.field_image.localFile.publicURL,
-    alt: drupalNode.field_image.alt,
+    src: `https:${contentfulNode.image.file.url}`,
+    alt: contentfulNode.image.title,
   };
 };
 
-const parseArticleBody = (item: DrupalArticleDataItem) => {
-  const drupalNode = item.node;
-  const body = drupalNode.body.processed;
+const parseArticleBody = (item: ContentfulArticleDataItem) => {
+  const contentfulNode = item.node;
+  const rawBody = contentfulNode.body.raw;
   // console.log('raw body', body);
+  const body = JSON.stringify(rawBody);
   // console.log('parsed body', new DOMParser().parseFromString(body, 'text/html'));
   // NOTE: Here we only need to deserialize in edit env. Currently deserialization
   // fails during production build bc of incommpatible NodeJS DOMParser.  Need to investigate
@@ -135,10 +127,11 @@ const parseArticleBody = (item: DrupalArticleDataItem) => {
 //   [prefix.slice(0, -1)]: parseArticleMetadata(props),
 // });
 
-const useDrupalArticleData = (prefix?: string) => () => {
-  const rawData: DrupalArticleData = useStaticQuery(query);
+const useContentfulArticleData = (prefix?: string) => () => {
+  const rawData: ContentfulArticleData = useStaticQuery(query);
   const fullPrefix = prefix ? `${prefix}$` : '';
-  const data = rawData.allNodeArticle.edges.reduce(
+  console.log('rawData', rawData);
+  const data = rawData.allContentfulArticle.edges.reduce(
     (data, next, index) => ({
       ...data,
       [`${fullPrefix}${next.node.id}`]: parseArticleMetadata(next),
@@ -151,6 +144,8 @@ const useDrupalArticleData = (prefix?: string) => () => {
   return data;
 };
 
-const withDrupalArticleData = withDefaultContent(useDrupalArticleData(ARTICLE_LIBRARY_NODEKEY));
+const withContentfulArticleData = withDefaultContent(
+  useContentfulArticleData(ARTICLE_LIBRARY_NODEKEY)
+);
 
-export default withDrupalArticleData;
+export default withContentfulArticleData;

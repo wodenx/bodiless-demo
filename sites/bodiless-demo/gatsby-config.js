@@ -26,6 +26,13 @@ const disabledPages = Object.keys(disablePageList).filter(
 // Gatsby plugins list.
 const plugins = [
   {
+    resolve: 'gatsby-source-contentful',
+    options: {
+      spaceId: '9jfq70qfast7',
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    },
+  },
+  {
     resolve: 'gatsby-source-drupal',
     options: {
       baseUrl: 'https://main-bvxea6i-kvlqv2lq6ljra.ca-1.platformsh.site',
