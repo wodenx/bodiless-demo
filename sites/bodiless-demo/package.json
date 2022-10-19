@@ -34,6 +34,7 @@
     "@bodiless/vital-templates": "^v1.0.0-rc.16",
     "@bodiless/vital-test": "^v1.0.0-rc.16",
     "@bodiless/webpack": "^v1.0.0-rc.16",
+    "@contentful/rich-text-html-renderer": "15.13.1",
     "autoprefixer": "^10.4.2",
     "docsify-cli": "^4.3.0",
     "dotenv": "^8.2.0",

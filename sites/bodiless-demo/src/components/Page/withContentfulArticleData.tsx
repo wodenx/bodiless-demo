@@ -2,6 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { withDefaultContent } from '@bodiless/core';
 import type { ArticleMetadata } from 'bodiless-demo';
 import { ARTICLE_LIBRARY_NODEKEY } from 'bodiless-demo';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import { deserializeBody } from './deserializeRichText.bl-edit';
 
 // NOTE: This query and related translations are defined at site level bc
@@ -103,20 +104,15 @@ const parseArticleFieldImage = (item: ContentfulArticleDataItem) => {
 
 const parseArticleBody = (item: ContentfulArticleDataItem) => {
   const contentfulNode = item.node;
-  const rawBody = contentfulNode.body.raw;
-  // console.log('raw body', body);
-  const body = JSON.stringify(rawBody);
-  // console.log('parsed body', new DOMParser().parseFromString(body, 'text/html'));
+  const jsonBody = contentfulNode.body.raw;
+  const rawBody = JSON.parse(jsonBody);
+  const body = documentToHtmlString(rawBody); 
   // NOTE: Here we only need to deserialize in edit env. Currently deserialization
   // fails during production build bc of incommpatible NodeJS DOMParser.  Need to investigate
   // further to support building from drupal in cases where we don't copy the deserialized
   // data during edit.
   const deserialized = process.env.NODE_ENV === 'production' ? [] : deserializeBody(body);
-  // console.log('deserialgized body', deserialized);
   return deserialized;
-  // return {
-  //   text: drupalNode.body.value,
-  // };
 };
 
 // const useArticleData = (prefix = '') => (props: any) => ({
