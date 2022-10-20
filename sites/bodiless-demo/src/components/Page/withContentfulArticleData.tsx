@@ -106,7 +106,7 @@ const parseArticleBody = (item: ContentfulArticleDataItem) => {
   const contentfulNode = item.node;
   const jsonBody = contentfulNode.body.raw;
   const rawBody = JSON.parse(jsonBody);
-  const body = documentToHtmlString(rawBody); 
+  const body = documentToHtmlString(rawBody);
   // NOTE: Here we only need to deserialize in edit env. Currently deserialization
   // fails during production build bc of incommpatible NodeJS DOMParser.  Need to investigate
   // further to support building from drupal in cases where we don't copy the deserialized
