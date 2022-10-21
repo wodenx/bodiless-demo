@@ -1,8 +1,9 @@
 import { asCardToken, vitalCard } from '@bodiless/vital-card';
 import { replaceWith } from '@bodiless/fclasses/lib/replaceable';
 import {
-  Div, flowHoc, extendMeta, on
+  Div, flowHoc, extendMeta, on, as
 } from '@bodiless/fclasses';
+import { asFilterableByGroup } from '@bodiless/filtering';
 import { vitalRichText, RichTextClean } from '@bodiless/vital-editors';
 import { vitalTypography } from '@bodiless/vital-elements';
 // import { NodeTreePrinter } from '../NodeTreePrinter';
@@ -71,6 +72,17 @@ const Promo = asCardToken({
   ),
 }, vitalCard.WithNoEyebrow);
 
-const demoArticle = { Feature, FeatureRight, Promo };
+const Listing = asCardToken({
+  ...Promo,
+  Schema: {
+    ...Promo.Schema,
+    _: as(asFilterableByGroup(), Promo.Schema._),
+  }
+
+});
+
+const demoArticle = {
+  Feature, FeatureRight, Promo, Listing,
+};
 
 export { demoArticle, ArticleMetadata, ARTICLE_LIBRARY_NODEKEY };

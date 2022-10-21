@@ -39,6 +39,7 @@
     "@bodiless/components-ui": "v1.0.0-canary-1964-714.0",
     "@bodiless/core": "v1.0.0-canary-1964-714.0",
     "@bodiless/fclasses": "v1.0.0-canary-1964-714.0",
+    "@bodiless/filtering": "v1.0.0-canary-1964-714.0",
     "@bodiless/hydration": "v1.0.0-canary-1964-714.0",
     "@bodiless/layouts": "v1.0.0-canary-1964-714.0",
     "@bodiless/layouts-ui": "v1.0.0-canary-1964-714.0",

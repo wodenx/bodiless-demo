@@ -34,6 +34,7 @@ query ContentfulQuery {
           }
           title
         }
+        terms
       }
     }
   }
@@ -61,6 +62,7 @@ type ContentfulArticleDataItem = {
       },
       title: string,
     },
+    terms: string[],
   }
 };
 
@@ -102,6 +104,17 @@ const parseArticleFieldImage = (item: ContentfulArticleDataItem) => {
   };
 };
 
+const parseArticleFieldTerms = (item: ContentfulArticleDataItem) => {
+  const contentfulNode = item.node;
+  const tags = (contentfulNode.terms ||[]).map(
+    t => ({
+      id: `__${t.toLowerCase()}`,
+      name: t,
+    }),
+  );
+  return { tags };
+};
+
 const parseArticleBody = (item: ContentfulArticleDataItem) => {
   const contentfulNode = item.node;
   const jsonBody = contentfulNode.body.raw;
@@ -126,7 +139,6 @@ const parseArticleBody = (item: ContentfulArticleDataItem) => {
 const useContentfulArticleData = (prefix?: string) => () => {
   const rawData: ContentfulArticleData = useStaticQuery(query);
   const fullPrefix = prefix ? `${prefix}$` : '';
-  console.log('rawData', rawData);
   const data = rawData.allContentfulArticle.edges.reduce(
     (data, next, index) => ({
       ...data,
@@ -135,6 +147,7 @@ const useContentfulArticleData = (prefix?: string) => () => {
       [`${fullPrefix}${next.node.id}$image`]: parseArticleFieldImage(next),
       [`${fullPrefix}${next.node.id}$body`]: parseArticleBody(next),
       [`${fullPrefix}${next.node.id}$description`]: parseArticleSummary(next),
+      [`${fullPrefix}${next.node.id}$_tags`]: parseArticleFieldTerms(next),
     }), {}
   );
   return data;

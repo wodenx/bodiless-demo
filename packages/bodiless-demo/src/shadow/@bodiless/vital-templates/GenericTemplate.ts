@@ -62,7 +62,7 @@ const ArticleListing = asGenericTemplateToken({
   Schema: {
     ...ContentListing.Schema,
     // Use the default (page-level) node-key for the content section as opposed to
-    // the site level one used with the filter select feature 
+    // the site level one used with the filter select feature
     // as defined in vitalGenericTemplateBase.ContentListing.Schema
     Content: vitalGenericTemplateBase.Base.Schema.Content,
   },
