@@ -40,6 +40,7 @@
     "lerna:canary": "lerna publish --canary --include-merged-tags --preid ks-canary --dist-tag ks-canary --force-publish",
     "psh:pull": "bash ./scripts/psh-pull.sh",
     "pw:run": "npx playwright test playwright/tests/smoke/* --project=chromium",
+    "refresh": "curl -X POST http://localhost:8000/__refresh",
     "serve": "lerna run serve --stream --scope @sites/bodiless-demo",
     "setup": "npm run bootstrap && npm run build:packages",
     "setup:gatsby-cloud": "npm run bootstrap:gatsby-cloud && npm run build:packages",

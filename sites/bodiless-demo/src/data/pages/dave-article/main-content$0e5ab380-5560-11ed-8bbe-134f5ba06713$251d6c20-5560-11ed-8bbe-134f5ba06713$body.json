@@ -1,0 +1,47 @@
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Hello I am the body of this article."
+      }
+    ]
+  },
+  {
+    "type": "H3",
+    "children": [
+      {
+        "text": "I can have headers"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "And other formatting"
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Even "
+      },
+      {
+        "type": "Link",
+        "data": {
+          "slatenode": {
+            "href": "https://bodiless-js.orgh"
+          }
+        },
+        "children": [
+          {
+            "text": "links"
+          }
+        ]
+      }
+    ]
+  }
+]
