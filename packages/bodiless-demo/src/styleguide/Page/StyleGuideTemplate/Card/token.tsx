@@ -1,11 +1,13 @@
 import { as } from '@bodiless/fclasses';
 import { vitalCardStatic } from '@bodiless/vital-card';
 import { withCategory } from '../../TokenEditor';
+import * as demoCard from '../../../../components/Card';
 
 const WithVerticalOrientation = withCategory('Orientation')(as(vitalCardStatic.WithVerticalOrientation));
 const WithHorizontalLeftOrientation = withCategory('Orientation')(as(vitalCardStatic.WithHorizontalOrientationBase, vitalCardStatic.WithHorizontalLeftOrientation));
 const WithHorizontalRightOrientation = withCategory('Orientation')(as(vitalCardStatic.WithHorizontalOrientationBase, vitalCardStatic.WithHorizontalRightOrientation));
 const WithHorizontalContentAtTop = withCategory('Positioning')(as(vitalCardStatic.WithHorizontalContentAtTop));
+const WithCenteredTitle = withCategory('Positioning')(as(demoCard.WithCenteredTitle));
 const WithHorizontalContentCentered = withCategory('Positioning')(as(vitalCardStatic.WithHorizontalContentCentered));
 const WithNoTitle = withCategory('Structure')(as(vitalCardStatic.WithNoTitle));
 const WithNoEyebrow = withCategory('Structure')(as(vitalCardStatic.WithNoEyebrow));
@@ -31,6 +33,7 @@ export {
   WithVerticalOrientation,
   WithHorizontalLeftOrientation,
   WithHorizontalRightOrientation,
+  WithCenteredTitle,
   Basic,
   Hero,
   Category,

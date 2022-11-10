@@ -3,7 +3,7 @@ import { asFluidToken } from '@bodiless/vital-elements';
 import { vitalFlowContainerBase } from '@bodiless/vital-flowcontainer';
 import { CardStatic, CardClean } from '@bodiless/vital-card';
 import { StyledEditor, StyledEditorClean } from '../../../components/StyledEditor';
-import { asGetStarted, asVideoCard } from '../../../components/Card';
+import { asGetStarted, asVideoCard, CaptionedImage } from '../../../components/Card';
 import { TitleTableClean, asSecondColumnHighlightedTitle, asThirdColumnHighlightedTitle } from '../../../components/Tables';
 import { VideoClean, VideoTokens } from '../../../components/Video';
 
@@ -25,6 +25,7 @@ const Default = asFluidToken(
       SecondHighlightedTable: on(TitleTableClean)(asSecondColumnHighlightedTitle),
       ThirdHighlightedTable: on(TitleTableClean)(asThirdColumnHighlightedTitle),
       Video: on(VideoClean)(VideoTokens.Default),
+      CaptionedImage: on(CardClean)(CaptionedImage),
     },
   },
   ExtraPadding,

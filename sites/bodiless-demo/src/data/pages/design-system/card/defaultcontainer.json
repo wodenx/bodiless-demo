@@ -6,6 +6,13 @@
         "className": "w-full lg:w-1/2"
       },
       "type": "Card"
+    },
+    {
+      "uuid": "2d7ab7c0-4bbe-11ed-8797-1d85a88da1bd",
+      "wrapperProps": {
+        "className": "w-full lg:w-1/2"
+      },
+      "type": "Card"
     }
   ]
 }
