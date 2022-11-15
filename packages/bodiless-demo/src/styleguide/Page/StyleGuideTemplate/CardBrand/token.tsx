@@ -2,7 +2,7 @@ import { as } from '@bodiless/fclasses';
 import { vitalCardStatic } from '@bodiless/vital-card';
 import { withCategory } from '../../TokenEditor';
 import {
-  asGetStarted, withGreyBackground, withGradientBackground, withSecondaryEyebrow
+  asGetStarted, withGreyBackground,
 } from '../../../../components/Card';
 
 /* Using vitalCardStatic these will get shadowned color changes */
