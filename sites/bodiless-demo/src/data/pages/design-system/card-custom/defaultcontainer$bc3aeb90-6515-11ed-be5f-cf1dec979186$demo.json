@@ -1,0 +1,11 @@
+{
+  "items": [
+    {
+      "uuid": "Card-c38331a3a9a2dc0d987c382aafd7fe1d",
+      "wrapperProps": {
+        "className": "w-full lg:w-full"
+      },
+      "type": "Card"
+    }
+  ]
+}

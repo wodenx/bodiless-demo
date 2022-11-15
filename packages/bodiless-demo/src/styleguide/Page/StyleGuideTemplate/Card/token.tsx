@@ -1,6 +1,9 @@
 import { as } from '@bodiless/fclasses';
 import { vitalCardStatic } from '@bodiless/vital-card';
 import { withCategory } from '../../TokenEditor';
+import {
+  asGetStarted, withGreyBackground, withGradientBackground, withSecondaryEyebrow
+} from '../../../../components/Card';
 
 const WithVerticalOrientation = withCategory('Orientation')(as(vitalCardStatic.WithVerticalOrientation));
 const WithHorizontalLeftOrientation = withCategory('Orientation')(as(vitalCardStatic.WithHorizontalOrientationBase, vitalCardStatic.WithHorizontalLeftOrientation));
@@ -18,6 +21,9 @@ const Hero = withCategory('Card SubTypes')(as(vitalCardStatic.Hero));
 const Category = withCategory('Card SubTypes')(as(vitalCardStatic.Category));
 const Topic = withCategory('Card SubTypes')(as(vitalCardStatic.Topic));
 const Product = withCategory('Card SubTypes')(as(vitalCardStatic.Product));
+const GetStartedGray = withCategory('Custom')(as(asGetStarted, withGreyBackground));
+const GetStartedGradient = withCategory('Custom')(as(asGetStarted, withGradientBackground));
+const WithSecondaryEyebrow = withCategory('Custom')(as(vitalCardStatic.Product, withSecondaryEyebrow));
 
 export {
   WithNoTitle,
@@ -36,4 +42,7 @@ export {
   Category,
   Topic,
   Product,
+  GetStartedGray,
+  GetStartedGradient,
+  WithSecondaryEyebrow,
 };

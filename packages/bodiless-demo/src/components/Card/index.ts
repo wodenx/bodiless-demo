@@ -1,7 +1,10 @@
+import { withPlaceholder } from '@bodiless/components';
+import { withAppendChild, withNodeKey } from '@bodiless/core';
 import {
-  Div, flowHoc, on, replaceWith, H2, extendMeta,
+  Div, flowHoc, on, replaceWith, H2, extendMeta, as,
 } from '@bodiless/fclasses';
 import { asCardToken, vitalCardStatic, vitalCard } from '@bodiless/vital-card';
+import { EditorPlainClean, vitalEditorPlain } from '@bodiless/vital-editors';
 import { vitalTypography } from '@bodiless/vital-elements';
 import { VideoClean, VideoTokens } from '../Video';
 
@@ -24,7 +27,7 @@ const asGetStarted = asCardToken(
     },
     Theme: {
       TitleWrapper: 'text-center',
-      Wrapper: 'bg-demo-table-light rounded-md',
+      Wrapper: 'rounded-md',
     },
     Meta: extendMeta(
       flowHoc.meta.term('Sub Type')('Get Started'),
@@ -32,6 +35,36 @@ const asGetStarted = asCardToken(
     ),
   }
 );
+
+const withGreyBackground = asCardToken({
+  Theme: {
+    Wrapper: 'bg-demo-table-light',
+  },
+  Meta: flowHoc.meta.term('Features')('Grey Background'),
+});
+
+const withGradientBackground = asCardToken({
+  Theme: {
+    Wrapper: 'bg-gradient-to-r from-demo-primary-interactive via-demo-accent to-demo-primary-interactive',
+  },
+  Meta: flowHoc.meta.term('Features')('Gradient Background'),
+});
+
+const SecondaryEyebrow = as(
+  vitalEditorPlain.Default,
+  withNodeKey('eyebrow2'),
+  withPlaceholder('Secondary Eyebrow'),
+)(EditorPlainClean);
+
+const withSecondaryEyebrow = asCardToken({
+  Components: {
+    EyebrowWrapper: withAppendChild(SecondaryEyebrow, 'Eyebrow2'),
+  },
+  Theme: {
+    EyebrowWrapper: 'flex justify-between',
+  },
+  Meta: flowHoc.meta.term('Features')('Secondary Eyebrow'),
+});
 
 const HeroCenter = asCardToken({
   Theme: {
@@ -71,6 +104,9 @@ const asVideoCard = asCardToken(
 
 export {
   asGetStarted,
+  withGreyBackground,
+  withGradientBackground,
+  withSecondaryEyebrow,
   HeroCenter,
   asVideoCard,
 };

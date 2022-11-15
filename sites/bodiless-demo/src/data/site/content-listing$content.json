@@ -43,6 +43,13 @@
       "type": "FilterableContent"
     },
     {
+      "uuid": "d449be20-6513-11ed-af8f-8d64dbd0e07d",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "FilterableContent"
+    },
+    {
       "uuid": "36b32ff0-bfed-11ec-a123-9fedd17f17d4",
       "wrapperProps": {
         "className": "w-full"

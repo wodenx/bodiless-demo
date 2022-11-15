@@ -1,12 +1,12 @@
 {
   "tags": [
     {
-      "id": "6051d1b5-2ee0-4492-8699-86d0024623f7",
-      "name": "Global Elements"
-    },
-    {
       "id": "230d1110-4f0b-4aa7-8f94-9a87d4f75316",
       "name": "Core"
+    },
+    {
+      "id": "afff9ba0-8808-461f-abd9-bcf3b741968e",
+      "name": "Components"
     }
   ]
 }
