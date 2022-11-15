@@ -8,7 +8,7 @@ import { Images } from './Images';
 import { Footer } from './Footer';
 import { Card } from './Card';
 import { CardBrand } from './CardBrand';
-import { CardMarket } from './Cardmarket';
+import { CardMarket } from './CardMarket';
 import { Table } from './Table';
 import { List } from './List';
 import { Breadcrumb } from './Breadcrumb';
