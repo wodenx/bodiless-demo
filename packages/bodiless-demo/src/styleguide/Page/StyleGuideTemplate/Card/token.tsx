@@ -1,23 +1,23 @@
 import { as } from '@bodiless/fclasses';
-import { vitalCardStatic } from '@bodiless/vital-card';
+import { vitalCardBase } from '@bodiless/vital-card';
 import { withCategory } from '../../TokenEditor';
 
-const WithVerticalOrientation = withCategory('Orientation')(as(vitalCardStatic.WithVerticalOrientation));
-const WithHorizontalLeftOrientation = withCategory('Orientation')(as(vitalCardStatic.WithHorizontalOrientationBase, vitalCardStatic.WithHorizontalLeftOrientation));
-const WithHorizontalRightOrientation = withCategory('Orientation')(as(vitalCardStatic.WithHorizontalOrientationBase, vitalCardStatic.WithHorizontalRightOrientation));
-const WithHorizontalContentAtTop = withCategory('Positioning')(as(vitalCardStatic.WithHorizontalContentAtTop));
-const WithHorizontalContentCentered = withCategory('Positioning')(as(vitalCardStatic.WithHorizontalContentCentered));
-const WithNoTitle = withCategory('Structure')(as(vitalCardStatic.WithNoTitle));
-const WithNoEyebrow = withCategory('Structure')(as(vitalCardStatic.WithNoEyebrow));
-const WithNoDescription = withCategory('Structure')(as(vitalCardStatic.WithNoDescription));
-const WithPrimaryTextLink = withCategory('CTA Type')(as(vitalCardStatic.WithPrimaryTextLink));
-const WithPrimaryButton = withCategory('CTA Type')(as(vitalCardStatic.WithPrimaryButton));
-const WithSecondaryButton = withCategory('CTA Type')(as(vitalCardStatic.WithSecondaryButton));
-const Basic = withCategory('Card SubTypes')(as(vitalCardStatic.Basic));
-const Hero = withCategory('Card SubTypes')(as(vitalCardStatic.Hero));
-const Category = withCategory('Card SubTypes')(as(vitalCardStatic.Category));
-const Topic = withCategory('Card SubTypes')(as(vitalCardStatic.Topic));
-const Product = withCategory('Card SubTypes')(as(vitalCardStatic.Product));
+const WithVerticalOrientation = withCategory('Orientation')(as(vitalCardBase.WithVerticalOrientation));
+const WithHorizontalLeftOrientation = withCategory('Orientation')(as(vitalCardBase.WithHorizontalOrientationBase, vitalCardBase.WithHorizontalLeftOrientation));
+const WithHorizontalRightOrientation = withCategory('Orientation')(as(vitalCardBase.WithHorizontalOrientationBase, vitalCardBase.WithHorizontalRightOrientation));
+const WithHorizontalContentAtTop = withCategory('Positioning')(as(vitalCardBase.WithHorizontalContentAtTop));
+const WithHorizontalContentCentered = withCategory('Positioning')(as(vitalCardBase.WithHorizontalContentCentered));
+const WithNoTitle = withCategory('Structure')(as(vitalCardBase.WithNoTitle));
+const WithNoEyebrow = withCategory('Structure')(as(vitalCardBase.WithNoEyebrow));
+const WithNoDescription = withCategory('Structure')(as(vitalCardBase.WithNoDescription));
+const WithPrimaryTextLink = withCategory('CTA Type')(as(vitalCardBase.WithPrimaryTextLink));
+const WithPrimaryButton = withCategory('CTA Type')(as(vitalCardBase.WithPrimaryButton));
+const WithSecondaryButton = withCategory('CTA Type')(as(vitalCardBase.WithSecondaryButton));
+const Basic = withCategory('Card SubTypes')(as(vitalCardBase.Basic));
+const Hero = withCategory('Card SubTypes')(as(vitalCardBase.Hero));
+const Category = withCategory('Card SubTypes')(as(vitalCardBase.Category));
+const Topic = withCategory('Card SubTypes')(as(vitalCardBase.Topic));
+const Product = withCategory('Card SubTypes')(as(vitalCardBase.Product));
 
 export {
   WithNoTitle,
