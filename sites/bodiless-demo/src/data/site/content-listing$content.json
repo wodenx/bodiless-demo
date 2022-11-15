@@ -50,6 +50,13 @@
       "type": "FilterableContent"
     },
     {
+      "uuid": "3f7e5110-652d-11ed-9469-4570e63ac882",
+      "wrapperProps": {
+        "className": "w-full"
+      },
+      "type": "FilterableContent"
+    },
+    {
       "uuid": "36b32ff0-bfed-11ec-a123-9fedd17f17d4",
       "wrapperProps": {
         "className": "w-full"

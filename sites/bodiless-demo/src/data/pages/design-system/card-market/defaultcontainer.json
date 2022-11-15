@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "uuid": "cac57250-652b-11ed-aa1d-cf1cd7afdc6c",
+      "wrapperProps": {
+        "className": "w-full lg:w-1/2"
+      },
+      "type": "Card"
+    },
+    {
+      "uuid": "de59ce60-652b-11ed-aa1d-cf1cd7afdc6c",
+      "wrapperProps": {
+        "className": "w-full lg:w-1/2"
+      },
+      "type": "Card"
+    },
+    {
+      "uuid": "a46897b0-6515-11ed-be5f-cf1dec979186",
+      "wrapperProps": {
+        "className": "w-full lg:w-1/2"
+      },
+      "type": "Card"
+    },
+    {
+      "uuid": "bc3aeb90-6515-11ed-be5f-cf1dec979186",
+      "wrapperProps": {
+        "className": "w-full lg:w-1/2"
+      },
+      "type": "Card"
+    }
+  ]
+}

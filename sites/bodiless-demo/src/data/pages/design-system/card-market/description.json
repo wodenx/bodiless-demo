@@ -1,0 +1,50 @@
+[
+  {
+    "type": "H3",
+    "children": [
+      {
+        "text": "The following examples show cards that have extended tokens to apply market customizations to them. ",
+        "Bold": true
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "The tokens can be explored by clicking on the component then choosing "
+      },
+      {
+        "text": "Tokens | Select",
+        "Bold": true
+      },
+      {
+        "text": " and checking/unchecking tokens."
+      }
+    ]
+  },
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Visit "
+      },
+      {
+        "type": "Link",
+        "data": {
+          "slatenode": {
+            "href": "https://johnsonandjohnson.github.io/Bodiless-JS/#/Development/API/@bodiless/vital-card/interfaces/VitalCard"
+          }
+        },
+        "children": [
+          {
+            "text": "Open link in new windowVitalCard Docs API"
+          }
+        ]
+      },
+      {
+        "text": " for more information on each token."
+      }
+    ]
+  }
+]

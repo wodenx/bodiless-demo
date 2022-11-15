@@ -7,6 +7,8 @@ import { FlowContainer } from './FlowContainer';
 import { Images } from './Images';
 import { Footer } from './Footer';
 import { Card } from './Card';
+import { CardBrand } from './CardBrand';
+import { CardMarket } from './Cardmarket';
 import { Table } from './Table';
 import { List } from './List';
 import { Breadcrumb } from './Breadcrumb';
@@ -28,6 +30,8 @@ export const VitalTestStyleGuideTemplate = {
   Footer,
   Video,
   Card,
+  CardBrand,
+  CardMarket,
   Table,
   Menu,
   BurgerMenu,
